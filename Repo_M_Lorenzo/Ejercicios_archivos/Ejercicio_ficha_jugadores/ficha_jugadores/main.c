@@ -135,6 +135,35 @@ int main()
                         break;
                     }
 
+                    case 7://Jugador mas alto
+                    {
+                        struct xogador *veterano;
+                        int maxaltura;
+                        veterano=malloc(sizeof(struct xogador));
+                        rewind(pFichero);
+                        maxaltura=0;
+
+
+                        do
+                        {
+                            fread(paisano,sizeof(struct xogador),1,pFichero);
+
+                            if(((int)paisano->altura)>maxaltura)
+                            {
+                                veterano=paisano;
+                            }
+
+
+
+                        }while (!feof(pFichero));
+
+                        printf("%s\n",veterano->nombre);
+                        printf("%s\n",veterano->altura);
+                        printf("%s\n",veterano->edad);
+
+                        break;
+                    }
+
                     case 10://Eliminar ficha
                     {
 

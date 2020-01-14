@@ -23,7 +23,7 @@ struct punto coordenadas()
 
 }
 
-float perim(int numPuntos, struct punto coord[LIMITE])
+float perim(int numPuntos, struct punto coord[LIMITE])//Funcion para calcular el perimetro
 {
     int contador;
     float perm;
