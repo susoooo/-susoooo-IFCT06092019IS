@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1578929062 source:/home/victor/c/Actjugadores/jugadores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"jugadores.h"
+
+1578929062 /home/victor/c/Actjugadores/jugadores.h
+
+1578929062 source:/home/victor/c/Actjugadores/main.c
+	<stdio.h>
+	"jugadores.h"
+
