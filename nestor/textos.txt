@@ -1,0 +1,1 @@
+espaciomemoria=malloc(sizeof(char));
