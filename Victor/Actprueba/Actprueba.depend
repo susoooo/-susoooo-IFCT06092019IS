@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1578681223 source:/home/victor/c/Actprueba/main.c
+	<stdio.h>
+	"productos.h"
+
+1578681224 /home/victor/c/Actprueba/productos.h
+
