@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1578928493 source:/home/ubuntu1/Documentos/Programas/proxecto1/main.c
+	<stdio.h>
+	"productos.h"
+
+1578928493 /home/ubuntu1/Documentos/Programas/proxecto1/productos.h
+
+1578928493 source:/home/ubuntu1/Documentos/Programas/proxecto1/productos.c
+	<stdio.h>
+	"productos.h"
+
