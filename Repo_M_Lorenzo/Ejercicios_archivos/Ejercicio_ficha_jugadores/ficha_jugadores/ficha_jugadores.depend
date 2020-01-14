@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1578683073 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicio_ficha_jugadores/ficha_jugadores/datos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"datos.h"
+
+1578683151 /home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicio_ficha_jugadores/ficha_jugadores/datos.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578931025 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicio_ficha_jugadores/ficha_jugadores/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+	"datos.h"
+
+1578683242 /home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicio_ficha_jugadores/ficha_jugadores/menu.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1578682965 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicio_ficha_jugadores/ficha_jugadores/menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menu.h"
+
