@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1576263083 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_funciones/Ejercicios_funciones10.c
+	<stdio.h>
+	<math.h>
+	<string.h>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1578680795 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicios_include/proyecto001/main.c
+	<stdio.h>
+	"productos.h"
+
+1578680795 /home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicios_include/proyecto001/productos.h
+
+1578680931 source:/home/mlorenzo/Escritorio/Programas/Ejercicios_archivos/Ejercicios_include/proyecto001/productos.c
+	<stdio.h>
+	"productos.h"
+

@@ -1,0 +1,4 @@
+Este es un archivo de texto.
+Empezamos con el primer archivo.
+Es un archivo de texto plano.
+Esta guardado en el disco duro.
