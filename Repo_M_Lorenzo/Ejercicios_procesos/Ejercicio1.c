@@ -2,26 +2,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main()
 {
-    pid_t pid;
+    pid_t pid1;
+    pid_t pid2;
+    pid_t pid3;
 
-    pid=fork();
 
-    switch (pid)
+    pid1=fork();
+
+    switch (pid1)
     {
         case -1:
             printf("No he podido crear el proceso hijo \n");
             break;
 
         case 0:
-            printf("Soy el hijo, mi PID es %d y mi PPID es %d \n", getpid(), getppid());
-            sleep(10); //suspende el proceso 20 segundos
+            printf("Soy el primer hijo, mi PID es %d y mi PPID es %d \n", getpid(), getppid());
+            sleep(10);
             break;
 
         default:
-            printf("Soy el padre, mi PID es %d y el PID de mi hijo es %d \n", getpid(), pid);
-            sleep(30); //suspende el proceso 30 segundos. Acaba antes el hijo.
+            pid2=fork();
+            switch (pid2)
+            {       
+                case -1:
+                    printf("No he podido crear el proceso hijo \n");
+                break;
+
+                case 0:
+                    printf("Soy el segundo hijo, mi PID es %d y mi PPID es %d \n", getpid(), getppid());
+                    sleep(10);
+                    break;
+
+                default:
+                    pid3=fork();
+                    switch (pid3)
+                    {
+                        case -1:
+                            printf("No he podido crear el proceso hijo \n");
+                            break;
+
+                        case 0:
+                            printf("Soy el tercer hijo, mi PID es %d y mi PPID es %d \n", getpid(), getppid());
+                            sleep(10);
+                            break;
+
+                        default:
+                            waitpid(pid1);
+                            waitpid(pid2);
+                            waitpid(pid3);
+                            printf("Soy el padre, mi PID es %d y el PID de mis hijos son %d, %d y %d\n", getpid(), pid1,pid2,pid3);
+                            break;
+                    }
+                    
+            }
+            
             break;
     }
 
