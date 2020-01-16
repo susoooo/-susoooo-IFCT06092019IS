@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <math.h>
+main()
+{
+printf("\n    - Hola soy el programa AÑO diseñado por Nestor Rois para calcular cuanto tiempo ha pasado entre dos fechas - \n");
+
+int ano1;
+int ano2;
+int diferencia;
+
+ano1=0;
+ano2=0;
+diferencia=0;
+
+printf("\nPor favor introduce el año de la primera fecha  = ");
+scanf("%d",&ano1);
+printf("\nPor favor introduce el año de la segunda fecha  = ");
+scanf("%d",&ano2);
+if (ano1==ano2)
+printf("\n  Las dos fechas son iguales hay 0 años de diferencia\n\n");
+else
+   {
+     if (ano1>ano2)
+        {
+        diferencia=(ano1-ano2);
+        printf("\nhay %d años entre %d y %d\n\n",diferencia,ano1,ano2);
+        }
+   
+        if (ano1<ano2)
+           {
+           diferencia=(ano2-ano1);
+           printf("\nhay %d años entre %d y %d\n\n",diferencia,ano2,ano1);
+           }
+           }
+}       
+¿Qué es la física cuántica? ¿Para qué sirve?
+La Mecánica Cuántica es la rama de la Física
+que estudia la materia a escalas muy pequeñas:
+a nivel molecular, atómico y aún menor. De no
+ser por su descubrimiento no se hubiese podido
+descubrir la electrónica (desde ordenadores a
+móviles), ni los láseres, ni los nuevos
+materiales( vitrocerámicas..).
+Las propiedades de la Física Cuántica son muy diferentes a las de la
+Física Clásica, que describen la naturaleza a nuestra escala. Se
+caracteriza principalmente por no ser determinista sino probabilista.
+Además la Energía en sistemas ligados (ej. átomo) no se intercambia
+de forma continua, sino en forma discreta lo cual implica la existencia
+de paquetes mínimos de energía, llamados cuantos.
+Electromagnetismo
+Electromagnetismo: Es la descripción unificada de la
+fuerza Eléctrica y la Magnética. Actúa, junto con la
+g r a v e d a d , a e s c a l a h u m a n a . E l m o t o r
+electromagnético es un buen ejemplo de aplicación
+básica de dicha fuerza.
+La Fuerza Eléctrica aparece cuando hay partículas
+cargadas eléctricamente. Las partículas con la misma
+carga se repelen y con opuesta se atraen.
+El Magnetismo aparece debido al movimiento
+de dichas partículas cargadas (imanes).
+Propiedades
+Las partículas subatómicas poseen propiedades muy diferentes a
+las que nosotros experimentamos a escala humana (de mm a Km).
+Dualidad Onda-Corpúsculo: Las partículas
+poseen la propiedad de comportarse a la vez como
+ondas (tipo ondas del agua) y a la vez como
+corpúsculos (tipo objetos sólidos).
+Principio de Incertidumbre de Heisenberg: No
+podemos conocer con precisión arbitraria
+determinadas cantidades observables de las
+partículas. Por ejemplo: la variación en posición y
+velocidad o la variación en la energía y el tiempo.
+Ejem: Si conocemos de una partícula su posición,
+entonces no sabemos su velocidad y viceversa.
+Mecánica Probabilística: El mundo microscópico
+no es determinista. Dadas unas condiciones iniciales,
+coexisten muchos estados posibles con una cierta
+probabilidad. Al medir, esa probabilidad desaparece y
+solo “ocurre” una de esas posibilidades.
+Efecto Túnel: A nivel cuántico las partículas
+tienen una probabilidad significativa de atravesar
+barreras de potencial (lo que para nosotros serían
+paredes). En esta propiedad y en el entrelazamiento
+se basan las computadoras cuánticas (I.Cirac).
+Fuerza nuclear débil
+La radioactividad tiene
+en parte su origen en esta
+interacción
+La Fuerza Débil es de muy corto alcance y al nivel de
+partículas elementales, transforma unas partículas en otras.
+Fuerza nuclear fuerte
+La Fuerza Fuerte permite que existan los
+núcleos de los átomos y pueda existir la materia
+tal y como la conocemos. En el núcleo hay
+protones (partículas cargadas eléctricamente
+“positivas”) y neutrones (neutras). Por repulsión
+electrostática deberían repelerse. La fuerza
+fuerte es atractiva y las mantiene unidas.
+A nivel de las partículas elementales, actúa
+sobre una clase de partículas llamada
+hadrones, confinando los quarks en su
+interior. A este nivel se le llama fuerza de
+color y actúa de forma análoga a un muelle.
+Modelo Estándard
+El Modelo Estándar es un modelo de unificación de partículas y de las
+fuerzas que actúan a nivel cuántico: fuerte, débil y electromagnética.
+Ordena la materia y energía en familias de acuerdo a sus propiedades
+La materia se clasifica en los que sienten la fuerza
+fuerte: hadrones (violeta) y los que no: leptones
+(verde). Todas las partículas interaccionan
+débilmente y si tienen carga eléctrica además
+electromagnéticamente. Las fuerzas tienen una
+partícula asociada (rojo). La electromagnética: el
+fotón, la fuerte: el gluón, la débil: partículas W y Z.
+Mecanismo de HIGGS: propuesta teórica
+para dar masa a las partículas que predice una
+nueva partícula Bosón de Higgs cuyo
+descubrimiento ha sido una de las razones
+f u n d a m e n t a l e s d e c o n s t r u i r e l L H C .
+Recientemente han sido encontrad
