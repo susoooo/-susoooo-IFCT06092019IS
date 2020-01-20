@@ -13,22 +13,22 @@ int contador;
 int main(int argc,char*argv[])
 {
     hijos = argc-2;
-    rf = fork();
+
     for (contador=0;contador<hijos;contador++)
     {
+        rf = fork();
         switch(rf)
         {
             case -1:
                     printf("No he podido crear el proceso hijo \n");
                     break;
             case 0 :
-                    execv("./programa1.out",argv);
-                    printf("un hijo");
                     rs = fork();
+                    printf("un hijo");
                     break;
                     exit(0);
             default:
-                    wait(0);
+                    execv("./programa1.out",argv);
                     exit(0);
         }
     }
