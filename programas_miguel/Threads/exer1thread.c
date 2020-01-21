@@ -20,16 +20,16 @@ printf("Thread existe\n");
 return NULL;
 }
 
-int main(int argc, char ** argv) 
+int main() 
 {
 
     int resultado;
     resultado=0;
-    
+
     pthread_t imprimir;
     printf("Lanzando novo thread . . .\n");
-    resultado = pthread_create (&imprimir , NULL , funcion , NULL );
-    //( TO_DO: introducir parámetros del hilo) )
+    resultado = pthread_create (&imprimir , NULL , funcion , NULL ); //Creamos thread e gardamos o que nos devolve en resultado para comprobar a creación co if
+
      if (resultado!=0)
      {
      printf("Erro creando thread.");
@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
     
     printf("Esperando join\n");
 
-    //TO_DO: controlar el error con el JOIN
+    //Controlamos o erro con JOIN
     pthread_join(imprimir,NULL);
     
     exit(0);
