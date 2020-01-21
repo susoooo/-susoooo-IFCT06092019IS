@@ -42,7 +42,7 @@ int main ()
     pid_t fillo3;
 
     printf("Por favor, introduce un número enteiro entre 3 e 21: ");
-    scanf("%d", N);
+    scanf("%d", &N);
 
     if (N>=3 && N<=21)
     {
@@ -62,11 +62,12 @@ int main ()
 
                 case 0:
                 printf("Son o fillo 1, o meu PID é %d e o meu PPID é %d \n", getpid(), getppid());
-                for (cont1=0;cont1=lonxitude;cont1++)
+                for (cont1=0;cont1<lonxitude;cont1++)
                 {
-                  suma=numero[contador]  
+                  suma=suma+numero[cont1];
                 }
-                
+                printf("O resultado da suma dos números da primeira sección é = %d\n",suma);
+                exit(0);
                 break;
 
                 default:
@@ -82,6 +83,13 @@ int main ()
 
                         case 0:
                         printf("Son o fillo 2, o meu PID é %d e o meu PPID é %d \n", getpid(), getppid());
+                        for (cont1=(lonxitude);cont1<(lonxitude)*2;cont1++)
+                        {
+                            suma=suma+numero[cont1];
+                            
+                        }
+                            printf("O resultado da suma dos números da segunda sección é = %d\n",suma);
+                            exit(0);
                         break; 
 
                         default:
@@ -97,6 +105,12 @@ int main ()
 
                                     case 0:
                                     printf("Son o fillo 3, o meu PID é %d e o meu PPID é %d \n", getpid(), getppid());
+                                    for (cont1=((lonxitude)*2);cont1<N;cont1++)
+                                    {
+                                        suma=suma+numero[cont1];
+                                    } 
+                                    printf("O resultado da suma dos números da terceira sección é = %d\n",suma);
+                                    exit(0);
                                     break; 
 
                                     default:
