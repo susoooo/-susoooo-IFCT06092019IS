@@ -31,4 +31,5 @@ free(memoria01);
 float * memoria02 = (float *) malloc(sizeof(float)*n);
 struct xogador * pXogador = (struct xogador *) malloc(sizeof(struct xogador));
 //printf("%d",sizeof(int));size of(int)me daria el numero de bits que tiene un entero
+//prueba para repositorio
 }

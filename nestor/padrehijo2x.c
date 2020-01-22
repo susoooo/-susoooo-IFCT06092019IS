@@ -33,23 +33,15 @@ diferente al que estaba ejecutando hasta entonces.*/
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc,char *argv[])
-//argc = numero de argumentos, argv = argumentos, 
+int main() 
 {
 pid_t h1;
 int numhijos;
 int contador;
 contador=0;
 numhijos =0;
-//printf("Bienvenido al programa Hijo+ para hacer hijos, !No guarrete no va por ahi!\n¿cuantos hijos quieres crear? = ");
-//scanf("%d",&numhijos);
-
-printf("pasaronme %d parametros\n",argc);
-for(numhijos=0;numhijos<argc;numhijos++)
-{
-  printf("o argumento %d é %s\n",numhijos,argv[numhijos]);
-}
-numhijos = argc-2;
+printf("Bienvenido al programa Hijo+ para hacer hijos, !No guarrete no va por ahi!\n¿cuantos hijos quieres crear? = ");
+scanf("%d",&numhijos);
 for(contador=0;contador<numhijos;contador++)
     {
 h1 = fork();
@@ -60,14 +52,11 @@ switch (h1)
         break;
         case 0:
         printf("Hola papa, son o teu %dº fillo.\n",contador+1);
-        printf("vou executar %s",argv[contador+2]);
-        fflush(stdout);
-        execv(argv[contador+2],NULL);
         
-        //exit(0);
         break;
         default:  
         printf("Son papa, hola %dº fillo\n",contador+1);
+        exit(0);
         }
     }
 printf("!JODER QUE PILA DE PEQUENOS!\n\n");
