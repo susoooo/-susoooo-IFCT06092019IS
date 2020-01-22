@@ -12,12 +12,12 @@ el valor calculado.*/
 void *suma(void *rango);
 int main()
   {
-  pthread_attr_t attr;
+  //pthread_attr_t attr;
   pthread_t thread;
   int rango[]={1,2,3,4,5,6,7,8,9,10};
   int *resultado;
-    pthread_attr_init(&attr);
-    pthread_create(&thread,NULL,suma,NULL);
+    //pthread_attr_init(&attr);
+    pthread_create(&thread,NULL,suma,(void *)rango);
     pthread_join(thread,NULL);
     printf("\nSuma  en Prog. Principal: %d\n",*resultado);
     return(0);
@@ -25,7 +25,8 @@ int main()
 
 void *suma(void *rango) 
   {
-   int i=0, *valores; 
+   int i; 
+   int *valores; 
    int *suma;
 
    valores= (int *)rango;
