@@ -14,8 +14,8 @@ int main()
     int *resultado;
 
     pthread_attr_init(&attr);
-    pthread_create(&thread,NULL,suma,NULL);
-    pthread_join(thread,NULL);
+    pthread_create(&thread,NULL,suma,(void *)rango);
+    pthread_join(thread,(void*)&resultado);
     printf("\nSuma en Prog. Principal: %d\n",*resultado);
     return(0);
 }
