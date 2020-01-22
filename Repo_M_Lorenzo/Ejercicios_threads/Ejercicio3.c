@@ -10,7 +10,6 @@ struct datos{
     int dato2;
 };
 
-//TO_DO: definir la estructura necesaria
 void *multiplicar (void *arg)
 {
     int a,b;
@@ -26,10 +25,11 @@ void *multiplicar (void *arg)
 int main(int argc, char* argv[])
 {
     struct datos *param;
-   
 
-    param->dato1=atoi(argv[1]);
-    param->dato2=atoi(argv[2]);
+    param=(struct datos*)malloc(sizeof(struct datos));
+
+    param->dato1=atoi(argv[2]);
+    param->dato2=atoi(argv[3]);
     
     thmain = pthread_self();
 
@@ -39,5 +39,7 @@ int main(int argc, char* argv[])
     printf("Soy main: he lanzado el thread y termino\n");
     pthread_join(thmain,NULL);
     pthread_exit (NULL);
+
+    free(param);
 
 }
