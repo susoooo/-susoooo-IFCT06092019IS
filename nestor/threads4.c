@@ -11,20 +11,20 @@ el valor calculado.*/
 
 void *suma(void *rango);
 int main()
-{
-pthread_attr_t attr;
-pthread_t thread;
-int rango[]={1,2,3,4,5,6,7,8,9,10};
-int *resultado;
+  {
+  pthread_attr_t attr;
+  pthread_t thread;
+  int rango[]={1,2,3,4,5,6,7,8,9,10};
+  int *resultado;
     pthread_attr_init(&attr);
-    pthread_create(TO_DO: introducir parámetros del hilo);
-    pthread_join(TO_DO: introducir parámetros de los hilos);
+    pthread_create(&thread,NULL,suma,NULL);
+    pthread_join(thread,NULL);
     printf("\nSuma  en Prog. Principal: %d\n",*resultado);
     return(0);
-}
+  }
 
 void *suma(void *rango) 
-{
+  {
    int i=0, *valores; 
    int *suma;
 
@@ -37,4 +37,4 @@ void *suma(void *rango)
      }
    printf("\tThread Suma : %d\n",*suma);
    pthread_exit(suma);
-} 
+  } 
