@@ -9,4 +9,5 @@ suma=0;
 suma=numero1+numero2;
 printf("el resultado es = %d\n",suma);
 printf("has sumado %d con %d\n",numero1,numero2);
+Printf("nueva linea para comprobar cambios");
 }

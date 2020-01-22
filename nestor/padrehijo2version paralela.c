@@ -33,23 +33,37 @@ diferente al que estaba ejecutando hasta entonces.*/
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-int main(int argc,char *argv[])
-//argc = numero de argumentos, argv = argumentos, 
+int main() 
 {
 pid_t h1;
 int numhijos;
 int contador;
+int n1;
+int n2;
+int seleccion;
+int suma;
+int resta;
+int multiplicacion;
+double division;
+n1=0;
+n2=0;
+suma=0;
+resta=0;
+multiplicacion=0;
+division=0;
+seleccion=1;
 contador=0;
 numhijos =0;
-//printf("Bienvenido al programa Hijo+ para hacer hijos, !No guarrete no va por ahi!\n¿cuantos hijos quieres crear? = ");
-//scanf("%d",&numhijos);
-
-printf("pasaronme %d parametros\n",argc);
-for(numhijos=0;numhijos<argc;numhijos++)
-{
-  printf("o argumento %d é %s\n",numhijos,argv[numhijos]);
-}
-numhijos = argc-2;
+suma=n1+n2;
+resta=n1-n2;
+multiplicacion=n1*n2;
+division=(float)n1/n2;
+printf("Bienvenido al programa fork creado para ejecutar procesos en paralelo ¿cuantos procesos quieres crear? = ");
+scanf("%d",&numhijos);
+printf("\nPor favor introduce el 1º numero para realizar calculos");
+scanf("%d",&n1);
+printf("\nPor favor introduce el 2º numero para realizar calculos");
+scanf("%d",&n2);
 for(contador=0;contador<numhijos;contador++)
     {
 h1 = fork();
@@ -60,15 +74,21 @@ switch (h1)
         break;
         case 0:
         printf("Hola papa, son o teu %dº fillo.\n",contador+1);
-        printf("vou executar %s",argv[contador+2]);
-        fflush(stdout);
-        execv(argv[contador+2],NULL);
-        
-        //exit(0);
+        exit(0);
         break;
         default:  
         printf("Son papa, hola %dº fillo\n",contador+1);
         }
     }
 printf("!JODER QUE PILA DE PEQUENOS!\n\n");
+
+printf("por favor introduzca el primer numero %d");
+scanf("%d",&n1);
+printf("por favor introduzca el segundo numero %d");
+scanf("%d",&n2);
+printf("\nLa suma de %d y %d es = %d\n",n1,n2,suma);
+printf("La resta de %d y %d es = %d\n",n1,n2,resta);
+printf("La multiplicación de %d y %d es = %d\n",n1,n2,multiplicacion);
+printf("La división entre %d y %d es = %f6\n\n",n1,n2,division);
+printf("                           GRACIAS POR USAR EL PROGRAMA CALCUPLUSPRO\n\n");
 }
