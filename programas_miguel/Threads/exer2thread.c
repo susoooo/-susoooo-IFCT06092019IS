@@ -8,27 +8,36 @@ un array de 10 enteros y cuando termina devuelve el valor calculado.*/
 #include <sys/stat.h>
 #include <fcntl.h>
 
-void *suma(void *rango);
-int main(){
-pthread_attr_t attr;
+void *fsuma(void *rango) 
+{
+int contador;
+int *valores;
+int *suma;
+valores= (int *)rango;
+suma=(int *)malloc (sizeof (int)); //malloc: necesitámolo se non sabemos os números que nos van pasar
+*suma=0;
+for(contador=0;contador<10;contador++) {
+*suma=*suma+valores[contador];
+}
+printf("\tThread Suma : %d\n",*suma);
+pthread_exit((void*)suma); //neste caso non sería necesario (void *)
+}
+
+
+int main()
+{
+//pthread_attr_t attr; É un atributo do thread, non o necesitamos neste caso
 pthread_t thread;
 int rango[]={1,2,3,4,5,6,7,8,9,10};
 int *resultado;
-pthread_attr_init(&attr);
-pthread_create(TO_DO: introducir parámetros del hilo);
-pthread_join(TO_DO: introducir parámetros de los hilos);
+//pthread_attr_init(&attr); É un atributo do thread, non o necesitamos neste caso
+pthread_create(&thread , NULL , fsuma , (void *)rango); // (void *) vai entre parénteses para forzarlle o tipo
+pthread_join(thread,(void *)&resultado);
 printf("\nSuma en Prog. Principal: %d\n",*resultado);
 return(0);
 }
-void *suma(void *rango) {
-int i=0, *valores;
-int *suma;
-valores= (int *)rango;
-suma=(int *)malloc (sizeof (int));
-*suma=0;
-for(i=0;i<10;i++) {
-*suma=*suma+valores[i];
-}
-printf("\tThread Suma : %d\n",*suma);
-pthread_exit(suma);
-}
+
+
+
+//phread_join e phread_exit están vinculados. phread_exit recolle suma e phread_join recólleo en resultado
+
