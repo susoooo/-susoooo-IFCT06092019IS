@@ -30,6 +30,10 @@ int main()
     pthread_t th[50];
     int i;
     int num;
+
+    i=0;
+    num=0;
+
     do
     {
         printf("¿Cuantos threads quieres ejecutar? ");
