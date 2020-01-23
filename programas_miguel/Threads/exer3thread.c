@@ -6,7 +6,7 @@ thread con multiplicar y terminar.*/
 #include <stdlib.h>
 #include <pthread.h>
 
-pthread_t thread1;
+
 
 struct datos
 	{
@@ -38,15 +38,18 @@ pthread_exit (NULL);
 
 int main()
 {
-struct datos recoller;
-	printf("Introduce o número 1: \n");
-	scanf("%d",&recoller.dato1);
-	printf("Introduce o número 2: \n");
-	scanf("%d",&recoller.dato2);
+
+pthread_t thread1;
+
+	struct datos recoller;
+			printf("Introduce o número 1: \n");
+			scanf("%d",&recoller.dato1);
+			printf("Introduce o número 2: \n");
+			scanf("%d",&recoller.dato2);
 
 
 printf("Son a función main e vou lanzar o thread \n");
-pthread_create (&thread1 , NULL , fmultiplicar , (void *)&recoller );
+pthread_create (&thread1 , NULL , fmultiplicar , (void *)&recoller);
 printf("Son main: lancei o thread e remato\n");
 pthread_exit (NULL);
 
