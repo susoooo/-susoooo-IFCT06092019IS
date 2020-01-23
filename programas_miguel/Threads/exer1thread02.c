@@ -7,11 +7,12 @@ Antes de imprimir el contenido del archivo por pantalla, preguntar al usuario cu
 
 int main()
 {
+    pthread_t thread1;
     
 
 
 
 
-    
+
     return 0;
 }
