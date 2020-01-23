@@ -6,6 +6,11 @@ pthread_t thread1, thmain;
 pthread_attr_t attr;
 
 //TO_DO: definir la estructura necesaria
+struct param
+{
+    int dato1;
+    int dato2;
+};
 
 void *multiplicar (void *arg)
 {
@@ -31,7 +36,8 @@ int main(int argc, char* argv[])
 
     pthread_attr_init (&attr);
     printf("Soy la función main y voy a lanzar el thread \n");
-    pthread_create (&thread1, NULL, multiplicar, (void *));
+    pthread_create (&thread1, NULL, multiplicar, (void *)param.);
+    pthread_join(thread, NULL);
     printf("Soy main: he lanzado el thread y termino\n");
     pthread_exit (NULL);
     //Inacabado.
