@@ -9,7 +9,7 @@ el valor calculado.*/
 #include <sys/stat.h>
 #include <fcntl.h>
 
-void *suma(void *rango);
+void *funcionsuma(void *rango); // necesitamos declarar funcionsuma antes do main, e sempre usamos (void *) con threads
 int main()
   {
   //pthread_attr_t attr;
@@ -17,25 +17,26 @@ int main()
   int rango[]={1,2,3,4,5,6,7,8,9,10};
   int *resultado;
     //pthread_attr_init(&attr);
-    pthread_create(&thread,NULL,suma,(void *)rango);
-    pthread_join(thread,NULL);
+    pthread_create(&thread,NULL,funcionsuma,(void *)rango);
+    pthread_join(thread,(void *)&resultado);//se carga en resultado sumatotal
     printf("\nSuma  en Prog. Principal: %d\n",*resultado);
     return(0);
   }
 
-void *suma(void *rango) 
+void *funcionsuma(void *rango) 
   {
-   int i; 
+   int contador; 
    int *valores; 
-   int *suma;
+   int *sumatotal;
 
    valores= (int *)rango;
-   suma=(int *)malloc (sizeof (int));
-   *suma=0;
-   for(i=0;i<10;i++) 
+   sumatotal=(int *)malloc(sizeof(int));//en este caso no seria necesario ya que suma solo tiene un valor que se va modificando maloc se usa cuando no sabemos cuntos numeros contiene el array
+   *sumatotal=0;
+   for(contador=0;contador<10;contador++) 
      {   
-     *suma=*suma+valores[i];
+     *sumatotal=*sumatotal+valores[contador];
      }
-   printf("\tThread Suma : %d\n",*suma);
-   pthread_exit(suma);
-  } 
+   printf("\tThread Suma : %d\n",*sumatotal);
+   pthread_exit(sumatotal);
+  }
+  //pthread_join ey phread_exit estan vinculados y le pasamos el puntero de suma total que lo cargara en (void *)&resultado
