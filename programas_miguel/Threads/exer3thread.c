@@ -1,6 +1,6 @@
 /*Realizar un programa que declare una función multiplicar y que le pase como parámetros 2
 números. A continuación el programa principal debe preparar los parámetros del thread y lanzar 1
-thread con multiplicar, escribir su propiedad identidad y terminar.*/
+thread con multiplicar y terminar.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,8 +16,13 @@ struct datos
 
 void *fmultiplicar (void *recibido)
 {
-int a,b;
+int a;
+int b;
 struct datos *p;
+
+a=0;
+b=0;
+
 p = (struct datos *) (recibido);
 
 a=(p->dato1);
