@@ -23,12 +23,8 @@ int main()
     int i;
     for (i=0;i<NUMTH;i++)
     {
-        pthread_create(&th[i], NULL, sumar, (void*)&i);
-    }
-   for (i=0;i<NUMTH;i++)
-    {
+        pthread_create(&th[i], NULL, sumar, NULL);
         pthread_join(th[i], NULL);
     }
-
     printf("Suma total = %d\n",suma_total);
 }
