@@ -6,9 +6,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-void *suma(void *rango);
+void *sumar(void *rango);
 pthread_attr_t attr;
-int f=0;
+int f;
 pthread_t thread[10];
 
 int main() 
@@ -16,14 +16,13 @@ int main()
     int i=0, n=0, rango=0, *estado, pestado=0, nbytes=0, nreg=0;
     estado=&pestado;
     pthread_attr_init(&attr);
-    //FILE * f;
     char *pRuta;
     pRuta=malloc(sizeof(char)*1024);
     printf("Introduzca la ruta del archivo\n");
     scanf("%s",pRuta);
 
 //TO_DO: controlar el error en la aperture del fichero
-    int f=open(pRuta,O_RDONLY);
+    f=open(pRuta,O_RDONLY);
     if(f==-1)
     {
         perror("Ha habido un error\n");
@@ -33,8 +32,8 @@ int main()
 
     for(i=0;i<10;i++) 
     {
-        pthread_create(&thread[i],NULL,suma,(void*)&rango);
-        sleep (1);
+        pthread_create(&thread[i],NULL,sumar,(void*)&rango);
+        sleep (1); 
         rango+=100;
     }
     for(i=0;i<10;i++) 
@@ -51,7 +50,7 @@ int main()
     return(0);
 }
 
-void *suma(void *rango) 
+void *sumar(void *rango) 
 {
     int j=0, valor, *suma, num=0;
     //sleep(1);
@@ -63,7 +62,8 @@ void *suma(void *rango)
     for(j=0;j<100;j++) 
     {
         read(f,&num,sizeof(int));
-        *suma+=num;
+        //*suma+=num;
+        printf("numero leido:%d",num);
     }
     printf("\tSuma Parcial: %d\n",*suma);
     //TO_DO: generar la salida del hilo
