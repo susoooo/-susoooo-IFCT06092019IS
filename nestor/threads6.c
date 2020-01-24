@@ -26,14 +26,16 @@ int main()
   for (contador=0;contador<numthreads;contador++)
       {
        pthread_create(&threadprint[contador],NULL,funcionprint,NULL);
-       pthread_join(threadprint,(void *)&parametro);
+       pthread_join(threadprint[contador],NULL);
+       printf("\n\nHola peñita son o viejo que tal ca fisica cuantica, un coñazo ou que?");
+       fflush(stdout);
       }
   }
 void * funcionprint(void * parametro)
       {
        FILE *manejadorarchivo;
        char *espaciomemoria;
-       fflush(stdout);
+       
        manejadorarchivo=fopen("/home/nestor/Documentos/repositorionestor/IFCT06092019IS/nestor/miarchivo.txt","rt");
        if(manejadorarchivo==0)
          {
@@ -46,11 +48,12 @@ void * funcionprint(void * parametro)
                 {
                 fread(espaciomemoria,sizeof(char),1,manejadorarchivo);
                 printf("%c",*espaciomemoria); 
+                fflush(stdout);
                 }
               while(!feof(manejadorarchivo));
               fclose(manejadorarchivo);
               free(espaciomemoria);
-              
+              printf("\nSalindo\n");
               pthread_exit(NULL);
               } 
       return(0);      
