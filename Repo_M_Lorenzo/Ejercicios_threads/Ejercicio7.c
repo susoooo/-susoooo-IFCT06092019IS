@@ -4,24 +4,38 @@
 #include <pthread.h>
 #include <math.h>
 
+void *factor(void* num);
 
+long factorial (long n)
+{
+    int i;
+    long producto;
+
+    producto=1;
+    i=1;
+    while(i<=(int)n)
+    {
+        producto=producto*i;
+        i=i+1;
+            
+    }
+    
+    return (producto);
+}
 
 void *factor(void* num)
 {
-    int n;
-    int i;
-    long producto;
-    n=num;
+    long n;
+    long *resultado;
 
-    producto = 1;
-    for (i = n; i > 1; i--) 
-    {
-        producto=producto*i;
-    }
+    resultado=(long*)malloc(sizeof(long));
 
-    pthread_exit(&producto);
- 
-    
+    n=*((long*)num);
+
+
+    *resultado=factorial(n);
+
+    pthread_exit((void*)*resultado);
 }
 
 int datos()
@@ -51,10 +65,11 @@ int main()
     int i;
     int *reparto;
     long *facto_parcial;
-    long factorial;
+    long res_factorial;
     numero=datos();
     num_threads=Nthreads();
     pthread_t *thread;
+
     thread=(pthread_t*)malloc((sizeof(pthread_t))*(num_threads));
     facto_parcial=(long*)malloc((sizeof(long))*(num_threads));
     reparto=(int*)malloc((sizeof(int))*(num_threads));
@@ -68,19 +83,24 @@ int main()
 
     for(i=0;i<num_threads;i++) 
     {
-        pthread_create(&thread[i],NULL,factor,(void*)reparto[i]);
+        pthread_create(&thread[i],NULL,factor,((void*)&reparto[i]));
     }
     for(i=0;i<num_threads;i++) 
     {
-        pthread_join(thread[i],(void*)facto_parcial[i]);
-    }
-    factorial=1;
-    for(i=0;i<num_threads;i++)
-    {
-        factorial=factorial*facto_parcial[i];
+        pthread_join(thread[i],(void*)&facto_parcial[i]);
+        
     }
 
-    printf("El resultado es: %d\n",factorial);
+
+    res_factorial=1;
+    for(i=0;i<num_threads;i++)
+    {
+        res_factorial=res_factorial*(facto_parcial[i]);
+        printf("%d",facto_parcial[i]);
+        fflush(stdout);
+    }
+
+    printf("El resultado es: %ld\n",res_factorial);
 
     
     free(reparto);
