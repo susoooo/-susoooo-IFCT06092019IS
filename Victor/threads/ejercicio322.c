@@ -48,6 +48,7 @@ int main()
 	}
 
 	pthread_create(&th1, NULL, multiplica, NULL);
+	pthread_join(th1, NULL);
 
 	for (x=0;x<LIMIT;x++) //Imprime array1
 	{
@@ -82,10 +83,10 @@ LIMIT 100
 real	0m0,026s
 user	0m0,008s
 sys	0m0,003s
-LIMIT 1000 (las ultimas multiplicaciones fallan)
-real	0m4,272s
-user	0m2,133s
-sys	0m0,018s
+LIMIT 1000
+real	0m6,638s
+user	0m4,095s
+sys	0m0,104s
 LIMIT 1000000
 Error de compilación
 */
