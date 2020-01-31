@@ -1,0 +1,1 @@
+cmd_/home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.mod := { echo  /home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.o; echo; } > /home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.mod
