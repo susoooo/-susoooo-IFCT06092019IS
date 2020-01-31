@@ -41,7 +41,7 @@ int main()
         arraynumeros[contador] = rand() % 101;
     }
 
-  printf("Bienvenido al programa thread array creado parra recorrer un array de 100 enteros y imprimir informacion sobre ellos");
+  printf("Bienvenido al programa thread array creado parra recorrer un array de 100 enteros con dos threads y imprimir informacion sobre ellos");
 
     pthread_create(&threadarray1,NULL,funcionarray1,NULL);
     pthread_create(&threadarray2,NULL,funcionarray2,NULL);

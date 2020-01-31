@@ -6,18 +6,24 @@ entre los threads indicados.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 pthread_t threads;
 void * funcionthread(void * total);
+int forzartipo;
 int contador;
+int contador1;
 int numero;
 int total;
 int numerothreads;
 
-total=0;
+total =0;
+numero =0;
+forzartipo =0;
 contador =1;
 contador1 =0;
-contador2 =0;
 
 int main()
 {
@@ -30,22 +36,24 @@ scanf("%d",&numerothreads);
  for (contador=0;contador<numerothreads;contador++)
       {
        pthread_create(&threads,NULL,funcionthread,(void *)&total);
-       pthread_join(threads,total);
-       printf("prueba de threads");
+       pthread_join(threads,NULL);
+       printf("%dº thread calculando el factorial de %d \n",contador+1,numero);
        fflush(stdout);
       }
   return(0);
 }
 void * funcionthread(void *total)
-{
-for (contador=numero;contador>=1;contador1--)
-      {
+{     
       int forzartipo;
       int *punteiroforzartipo;
       punteiroforzartipo = (int *)total;
       forzartipo = *punteiroforzartipo;
-      total *= contador;
+      //printf("%d",numero);
+
+for (contador1=numero;contador1>=1;contador1--)
+      {
+      forzartipo = forzartipo *contador1; 
       }
       printf("\nEl resultado del factorial indicado es: %d\n",total);
-      printf("Ha sido calculado %d veces con %d threads",numerothreads);
+      //printf("Ha sido calculado %d veces con %d threads\n",numerothreads,numerothreads);
 }

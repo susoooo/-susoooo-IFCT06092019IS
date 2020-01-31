@@ -1,0 +1,1 @@
+cmd_/home/mlorenzo/Documentos/Repositorio/Drivers/Proyecto_driver/driver.mod := { echo  /home/mlorenzo/Documentos/Repositorio/Drivers/Proyecto_driver/driver.o; echo; } > /home/mlorenzo/Documentos/Repositorio/Drivers/Proyecto_driver/driver.mod
