@@ -1,0 +1,1 @@
+cmd_/home/nestor/Documentos/repositorionestor/IFCT06092019IS/nestor/memoria.mod := { echo  /home/nestor/Documentos/repositorionestor/IFCT06092019IS/nestor/memoria.o; echo; } > /home/nestor/Documentos/repositorionestor/IFCT06092019IS/nestor/memoria.mod
