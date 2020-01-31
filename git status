@@ -1,0 +1,693 @@
+[33mcommit b525260fc51b096e2121ab4cc8a23bb261333eb7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: XVili <xguirei@gmail.com>
+Date:   Mon Jan 27 20:07:10 2020 +0100
+
+    Exercicio de 2 theads con un rand modificado
+
+[33mcommit fb12df26c1bcf85d946d203730b14ec0c46e6c26[m
+Merge: e7afcc4 8835d93
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 24 20:28:48 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit e7afcc4231123ad42f0cffc3909b814d5d7ffc40[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 24 20:27:54 2020 +0100
+
+    Exercicio 2 thr con rand.
+
+[33mcommit 8835d932e49ff006078c87906ee9b64eae82d988[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Fri Jan 24 20:24:44 2020 +0100
+
+    Continuacion de los ejercicios de threads
+
+[33mcommit 495b646f2838603ceeb367ad30dde8622f7093f4[m
+Merge: 4941751 77b5de6
+Author: nestorrois <restirui@gmail.com>
+Date:   Fri Jan 24 20:07:35 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 49417519a80419767f0b9b761b389d25cc220360[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Fri Jan 24 20:07:03 2020 +0100
+
+    version 24/01
+
+[33mcommit 77b5de629df485630364eb3faca9b802482f0e01[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 24 17:12:08 2020 +0100
+
+    Arquivo auxiliar pra leer por Xov23pth2.c
+
+[33mcommit d528c0a311b34681e4d95e7785dcf3aa1ec212b2[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 24 17:09:49 2020 +0100
+
+    pthreads pra leer outro arquivo
+
+[33mcommit ecbcc674543ad4ab1d8e8251e9742f5458be18db[m
+Merge: 37317ff c92dd3c
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 23 20:27:52 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 37317ff2f908f1d566c8575fe13c5142ff2054a0[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 23 20:27:19 2020 +0100
+
+    version 23/01
+
+[33mcommit c92dd3cb4793992a123066c2a6e1d6aae68cf1f1[m
+Merge: d301368 680924c
+Author: Victor <victormsp@yahoo.es>
+Date:   Thu Jan 23 20:24:36 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 680924ca0f71bc28c18c8a9de153c8568d715b10[m
+Merge: 03ce985 c8ed320
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 20:23:46 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 03ce9859b71a23fb0c1e59fdaa1db78023bd0ca9[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 20:23:37 2020 +0100
+
+    Engado exercicios de threads
+
+[33mcommit d3013680ced107a9559c3e17872df5af4c4ab77f[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Thu Jan 23 20:23:30 2020 +0100
+
+    Versión 6.2 más ejercicios de threads
+
+[33mcommit c8ed3208d73a184d9471133a1133a707b710b563[m
+Merge: 2b69d58 ada39a2
+Author: XVili <xguirei@gmail.com>
+Date:   Thu Jan 23 20:22:45 2020 +0100
+
+    git Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit ca1c08dc27034f2dcf6beec465920928692e6c61[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Thu Jan 23 20:22:14 2020 +0100
+
+    Versión 6.2 más ejercicios de threads
+
+[33mcommit 2b69d583ebae6a490cd01b36213b848c5be8389d[m
+Author: XVili <xguirei@gmail.com>
+Date:   Thu Jan 23 20:21:20 2020 +0100
+
+    Exercicio de theads, imprimir outro arquivo.
+
+[33mcommit ada39a26971f585fb3b3a20e99707f13a8392456[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Thu Jan 23 20:18:23 2020 +0100
+
+    Continuacion de Ejercicios threads(Ej 5, 6 y 7)
+
+[33mcommit 7bc6311edcdf5ec3745e299b669e995d0dbf23fe[m
+Merge: a0add15 6c386f1
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 20:02:16 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit a0add1539e6dd925813940891d919894a09bd5f6[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 20:02:07 2020 +0100
+
+    Engadidos exercicios de Threads
+
+[33mcommit 6c386f10b74824c867e03df80ff027b03667bc53[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Thu Jan 23 19:58:32 2020 +0100
+
+     Mas ejercicios de threads
+
+[33mcommit 14c79d090be0504d02dcf90d0ae25f265446633b[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 19:07:58 2020 +0100
+
+    Engado exercicio 3 de threads
+
+[33mcommit a56fab42b5271280fe4b4ebcaeb05eda37f8af77[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 23 19:06:39 2020 +0100
+
+    Engado exercicio 3 de threads
+
+[33mcommit f92eae93f6dc28750e8a6b973ad97f1cb71c45ed[m
+Merge: 74f7101 cb9a908
+Author: Rodrilos <dridavogh@gmail.com>
+Date:   Thu Jan 23 17:07:52 2020 +0100
+
+    Segunda versión
+
+[33mcommit 74f71019c94ba038bdf66364f49e9c040a247c3d[m
+Merge: 81eae3a be612d6
+Author: Rodrilos <dridavogh@gmail.com>
+Date:   Thu Jan 23 17:05:45 2020 +0100
+
+    Segunda versión
+
+[33mcommit 13a0670e61353dad74c14c982e9647e7d4c041d0[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 23 15:43:16 2020 +0100
+
+    version 23/1
+
+[33mcommit eaf7d088de4c789052fbf3309430b5926b2014c4[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 23 15:42:15 2020 +0100
+
+    version 23/01
+
+[33mcommit cb9a9081b731118b3273e55fd8f6ea07b7542f65[m
+Merge: accf106 be612d6
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 23 15:40:44 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 81eae3aa74cd5764eef532580561dd179fae97d6[m
+Author: Rodrilos <dridavogh@gmail.com>
+Date:   Thu Jan 23 15:34:49 2020 +0100
+
+    Segunda versión
+
+[33mcommit be612d6938ca69b50ae51bd2dcb3f5d6e0032d96[m
+Merge: 9ae6157 3b813ee
+Author: Victor <victormsp@yahoo.es>
+Date:   Wed Jan 22 20:27:54 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Versión 6.1 pull para hacer push
+
+[33mcommit 9ae61578b01f8d52c0b4e7c264a024a6d044f517[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Wed Jan 22 20:26:40 2020 +0100
+
+    Versión 6.1 Se añaden más ejercicios de threads
+
+[33mcommit 3b813ee3ddcca3d36e193507101d518d4bcb2ff5[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Wed Jan 22 20:22:10 2020 +0100
+
+    Engado exercicio 2 de Threads
+
+[33mcommit 0d9c8f299decf0657c4fff720af38b271272db92[m
+Merge: dde173a 286463d
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Wed Jan 22 20:19:36 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit dde173ab22cda4e88cf095a9ff5dce4ed6cf7a62[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Wed Jan 22 20:19:08 2020 +0100
+
+    Engado exercicio 2 de Threads
+
+[33mcommit 286463d5b90b79e20cdb58beb93d835bfe7c7520[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Wed Jan 22 20:15:55 2020 +0100
+
+    continuacion de ejercicios de threads
+
+[33mcommit 57973d36a0db2aeb528a47e452fc78604943269b[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Wed Jan 22 19:30:47 2020 +0100
+
+     Siguiendo con threads
+
+[33mcommit adfb1f56e508f8f6d084ee382a9372e4fae11371[m
+Author: Rodrilos <dridavogh@gmail.com>
+Date:   Wed Jan 22 16:58:56 2020 +0100
+
+    Primera versión git
+
+[33mcommit accf106ad259d4e4e17bdd33f249963a970358cc[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 16:46:42 2020 +0100
+
+    version 22/01
+
+[33mcommit 05e052b45bb2ae0dc3aa6a2628e73106cfb97645[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 16:33:01 2020 +0100
+
+    vesion 22/01
+
+[33mcommit e97fd861c0cbd332a81a53c8e77d78dbc2bf3bad[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 16:32:32 2020 +0100
+
+    version 22/01
+
+[33mcommit ad2aacf6e14376cb67af435ff79c603719c4118a[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 16:02:47 2020 +0100
+
+    version 22/01
+
+[33mcommit 5524b100b5dde5fe6a24e24f57936127275b8da6[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 15:51:12 2020 +0100
+
+    version 22/01
+
+[33mcommit 3d9a3a3c706ad6d062fa3706dbd9f6a7be0d617f[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Wed Jan 22 15:50:27 2020 +0100
+
+    version 22/01
+
+[33mcommit 804c7405cd4eb04da4ebde8cdcac5a2ed76a6f2c[m
+Merge: 6167c67 ab8dad5
+Author: XVili <xguirei@gmail.com>
+Date:   Tue Jan 21 20:23:35 2020 +0100
+
+    Exercicios de threats realizados.
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 6167c67acef86df53c1d19e7a5ff72e1bac7b5da[m
+Author: XVili <xguirei@gmail.com>
+Date:   Tue Jan 21 20:22:41 2020 +0100
+
+    Tres exercicios de threads
+
+[33mcommit ab8dad50ef99907ea5003d82170e747c4016a24f[m
+Merge: 41e5786 6e5e0e1
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 21 20:22:18 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 41e578614a7c54a184ff71ae83438e05e68b0b66[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 21 20:21:37 2020 +0100
+
+    Ejercicios Threads
+
+[33mcommit 6e5e0e1fdf338a20263b75c11eb309af84b94522[m
+Merge: 1f5a3ab 2e33ba9
+Author: Victor <victormsp@yahoo.es>
+Date:   Tue Jan 21 20:20:59 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Versión 6 Pull para hacer push
+
+[33mcommit 1f5a3aba8dccdb2edf6afc149b6bc993e0d0da79[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Tue Jan 21 20:19:28 2020 +0100
+
+    Versión 6 Se añaden ejercicios de threads
+
+[33mcommit 2e33ba9d829f03ccc81d78f8366141ebb075743f[m
+Merge: b92e469 4daa2dc
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Tue Jan 21 20:04:39 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 4daa2dcf88a3d4e4a2e8fc1334aa837afa0d07c5[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 21 20:02:40 2020 +0100
+
+    Subo primeiros exercicios de Threads
+
+[33mcommit b92e46920690087db82744f484c8bebde9f829c7[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Tue Jan 21 20:02:07 2020 +0100
+
+    Ejercicios de Threads 1.0
+
+[33mcommit bedd52bdc3d6459a3c3388432e5ff1e98514e3c2[m
+Merge: ba7aa18 317de2d
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 21 19:50:48 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit ba7aa18d7565cee3f95346d8df49ebb6b9e7d989[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 21 19:49:47 2020 +0100
+
+    Subo primeiros exercicios de Threads
+
+[33mcommit 317de2d1bdac2b8278d38e602a1c78edaa006807[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Tue Jan 21 19:19:47 2020 +0100
+
+     Añadidos ejercicios de threads
+
+[33mcommit 10051303b5dcb7951e7cfc3117ee36fac14705fb[m
+Merge: 94689be f9add8f
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 21 19:01:34 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 94689be12f853c06c5b8eeddfde20c7ef24ae109[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 21 19:00:28 2020 +0100
+
+    Subo carpeta de Procesos actualizada ata a data
+
+[33mcommit 298e99222db87db8f95abf0f00e4833ddecc18c5[m
+Author: XVili <xguirei@gmail.com>
+Date:   Mon Jan 20 20:23:30 2020 +0100
+
+    Exercicio de procesos.
+
+[33mcommit d1097ff38ecfdb05c05e170ef1cbe0f176dfef9e[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Mon Jan 20 20:23:02 2020 +0100
+
+    Exercicio 2 da folla 2 inacabado
+
+[33mcommit f9add8fbc77c5c6bc7c230f66416639d4309d904[m
+Merge: 48c0149 8fa1d81
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Mon Jan 20 20:18:34 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 48c0149a62d8e898c79caede0395949b3f90468d[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Mon Jan 20 20:17:33 2020 +0100
+
+    Ejercicios 3, 4 y 5 de procesos
+
+[33mcommit 8fa1d816a23051ef7f4d47d37b405e71537d264a[m
+Merge: 213109b 68bbc78
+Author: Victor <victormsp@yahoo.es>
+Date:   Mon Jan 20 20:16:37 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Pull para hacer push de versión 5
+
+[33mcommit 213109b20edbd87e534740a594d85383e99439f5[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Mon Jan 20 20:08:58 2020 +0100
+
+    Versión 5 Se añaden ejercicios 1 y 2 de la segunda tanda de procesos
+
+[33mcommit 68bbc78af545d7cc5208ea26c29ccc0ee764c80e[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Mon Jan 20 19:02:53 2020 +0100
+
+    Procesos2.0
+
+[33mcommit 0322cb371010f910197c8cf627bc4cab66120e4b[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Mon Jan 20 18:27:23 2020 +0100
+
+     Terminados los ejercicios de la hoja uno de procesos. Voy a por el 2
+
+[33mcommit 3b263f331f3fc35d44b33f6d91ca2d11ced80076[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Mon Jan 20 16:41:27 2020 +0100
+
+    Actualizo exercicios incluíndo o número 3, con 2 versións
+
+[33mcommit d09312d03af0279246509a864b5638ee35211041[m
+Merge: 690c165 824032b
+Author: Victor <victormsp@yahoo.es>
+Date:   Fri Jan 17 20:10:28 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Se actualiza con contenido de remoto para poder hacer push
+
+[33mcommit 824032beff713151291cb46c6deb520d0efdc424[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Fri Jan 17 20:09:03 2020 +0100
+
+    Exercicio 2 de procesos, versión reducida
+
+[33mcommit 690c165fbea6afa802b6ec1bd2d8669613525711[m
+Merge: 09fafa4 66a9eed
+Author: Victor <victormsp@yahoo.es>
+Date:   Fri Jan 17 20:08:41 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Versión 4 Se actualiza repositorio con contenido del remoto
+
+[33mcommit 09fafa4f85c6373df938cd98ebec9b74443fb751[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Fri Jan 17 20:06:58 2020 +0100
+
+    Versión 4 Se añade ejercicio 3 de procesos
+
+[33mcommit 66a9eed156f1d954a220e55124a5155b6f5d7999[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Fri Jan 17 20:05:31 2020 +0100
+
+     mas ejercicios de procesos
+
+[33mcommit 157005ac859c00cb208727a9fa0473cfcff10398[m
+Merge: d60aa4d a6fbb3f
+Author: nestorrois <restirui@gmail.com>
+Date:   Fri Jan 17 19:01:31 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit a6fbb3fb1984c931cd321d7e2c3977b7ed0528b2[m
+Merge: 0f90530 90b12a5
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 17 18:33:28 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 0f90530972baa20dd9389a4b2f3459539109c333[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 17 18:31:56 2020 +0100
+
+    Exercicio de fork, con tres executables.
+
+[33mcommit d60aa4df625048fc0de54b506998dfbe87bcb9a8[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Fri Jan 17 15:56:40 2020 +0100
+
+    hay calquer cousa cando o fixen o algo asi
+
+[33mcommit 46c76a0c8ecefecbd7b9bf0351c83c932b287231[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 17 15:54:21 2020 +0100
+
+    primeiro exercicio de fork, creación tres fillos.
+
+[33mcommit 90b12a50f3d193d301e734acc8baa5a8b4ec9b34[m
+Merge: 62711b5 48ae288
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Fri Jan 17 15:53:39 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Descarga de repositorio remoto para sincronizar cambios en repositorio local
+
+[33mcommit 48ae288cd056ca33fcb63a32bbef674423978506[m
+Author: XVili <xguirei@gmail.com>
+Date:   Fri Jan 17 15:48:44 2020 +0100
+
+    Programa con bucle para ejecutar abx16.out
+
+[33mcommit 62711b5348064cb2396ac2c81bd5d713cdef622b[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Fri Jan 17 15:47:33 2020 +0100
+
+    Engadida carpeta con exercicios de procesos
+
+[33mcommit bb19c37ff15de93fec69539a9db26c1ff1ff498c[m
+Merge: 7da2bf3 b8e8dd4
+Author: XVili <xguirei@gmail.com>
+Date:   Thu Jan 16 20:25:40 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 7da2bf384ce013513548f1accf568d64128f9db6[m
+Author: XVili <xguirei@gmail.com>
+Date:   Thu Jan 16 20:24:11 2020 +0100
+
+    proba
+
+[33mcommit 66f40ca9b719c6b15b85898d48db6db8c9cb121f[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 16 20:21:06 2020 +0100
+
+    Engadida carpeta con exercicios de procesos
+
+[33mcommit cdfda5b3300b431912abddb3aa2595e8b150747d[m
+Author: XVili <xguirei@gmail.com>
+Date:   Thu Jan 16 20:20:05 2020 +0100
+
+    programa a executar en xov16b.c
+
+[33mcommit b8e8dd409dde6fb7c32385b92be6b039c2180fd5[m
+Merge: ade22fb 1a95714
+Author: Victor <victormsp@yahoo.es>
+Date:   Thu Jan 16 20:16:08 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Version 3 Pull a repositorio remoto para actualizar
+
+[33mcommit 1a95714ee5f42f4768e7b3b84d146af308a6a00c[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Thu Jan 16 20:15:05 2020 +0100
+
+    Continuacion de ejercicios de procesos
+
+[33mcommit ade22fba2c13a05b6460f545e1cfd4efd950c19b[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Thu Jan 16 20:14:12 2020 +0100
+
+    Versión 3 se añaden ejercicios 1 y 2 de procesos
+
+[33mcommit b9993a1e978c6e88f3547efca8f6db8237b05d3a[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Thu Jan 16 18:34:05 2020 +0100
+
+     Añadido include a plantilla y añadidos ejercicios de procesos
+
+[33mcommit 46909350eb0a67bf1a7529d1f80a6af916750730[m
+Merge: 6a5a61c a99889b
+Author: nestorrois <restirui@gmail.com>
+Date:   Thu Jan 16 16:56:27 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit a99889b6e019f3dfe01a1562661734ea39f0fef0[m
+Merge: 82d22d3 8e7dd91
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Thu Jan 16 16:43:23 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 8e7dd91dc88a5282d22bacfc6ff023cb3340b8aa[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Wed Jan 15 20:21:05 2020 +0100
+
+    Ejercicios de procesos
+
+[33mcommit 82d22d3bfd08d3268a38654ac0cd38b1e2bd022b[m
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Wed Jan 15 20:19:07 2020 +0100
+
+    Engado exemplo de proceso fork
+
+[33mcommit 46a9a1f7046620e9b06eb321582a388e93885a77[m
+Author: XVili <xguirei@gmail.com>
+Date:   Wed Jan 15 20:13:51 2020 +0100
+
+    proba do mércores.
+
+[33mcommit 7a08c1ddc03fd5845f6a77e75a114c9e43a69e10[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Wed Jan 15 19:02:37 2020 +0100
+
+    Versión 2 Se sube programa de ejemplo de procesos
+
+[33mcommit 6a5a61ccf6f388f6f5757711c6d142066ae8253e[m
+Merge: d83e006 3d774c8
+Author: nestorrois <restirui@gmail.com>
+Date:   Tue Jan 14 20:25:08 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 49026867b1e2f0430779deef8034bceb31bf8c48[m
+Merge: 7e9e882 3d774c8
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 14 20:24:57 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 3d774c83440a45b6b06a430d80330fc2062ed952[m
+Merge: 863b31f 90a9773
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Tue Jan 14 20:23:36 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+    
+    Pusheando
+
+[33mcommit 7e9e882bfc768049c102ecb65410d95a4d183d75[m
+Merge: 67e52dd 959f186
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 14 20:23:14 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit d83e00616a1e152c40c1ec83d376efbd88691404[m
+Merge: 1825d69 959f186
+Author: nestorrois <restirui@gmail.com>
+Date:   Tue Jan 14 20:23:11 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 90a97737189bd068b034daf4dd9933b581c934ad[m
+Merge: 412ba56 959f186
+Author: miguel1978diaz <m78sancovade@gmail.com>
+Date:   Tue Jan 14 20:22:18 2020 +0100
+
+    Merge branch 'master' of https://github.com/susoooo/IFCT06092019IS
+
+[33mcommit 959f186aa2f993d362865599971ef42c94d48bf1[m
+Author: Victor <victormsp@yahoo.es>
+Date:   Tue Jan 14 20:18:22 2020 +0100
+
+    Primera subida de ejercicios a local
+
+[33mcommit 67e52ddcd705187818c67d69e2d50224e44e9a62[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 14 20:16:36 2020 +0100
+
+    Añadidos nuevos ejercicios y actualizaciones
+
+[33mcommit 029a6ce740e7267767ca78422354095c4c097af1[m
+Author: malorenzoc <malorenzoc@malorenzoc.com>
+Date:   Tue Jan 14 20:11:02 2020 +0100
+
+    Ejercicios de programacion en C
+
+[33mcommit 863b31f7192c0f9c713966a0bc9dd75547495a3e[m
+Author: AlexFerLo <alexferlo86@gmail.com>
+Date:   Tue Jan 14 19:43:19 2020 +0100
+
+     Carpeta de Alex subida
+
+[33mcommit 1825d69edc6dd586afebb69164ed77d67d68395c[m
+Author: nestorrois <restirui@gmail.com>
+Date:   Tue Jan 14 19:43:18 2020 +0100
+
+    subida la primera version
+
+[33mcommit 412ba56cdad40c47aaa73e91be56aa02bbf9331f[m
+Author: migel <migel@proba02.com>
+Date:   Tue Jan 14 19:38:18 2020 +0100
+
+    Primeira versión de programas de Miguel
+
+[33mcommit 6c0ebdc62883af9c53eb4715268889762d4f4fb5[m
+Author: susoooo <suoooo@gmail.com>
+Date:   Tue Jan 14 19:38:10 2020 +0100
+
+    prueba de una subida
+
+[33mcommit 3676a0126d6c64c42e1fdca3cd25db8716f692a0[m
+Author: susoooo <susoooo@gmail.com>
+Date:   Tue Dec 17 18:27:32 2019 +0100
+
+    Initial commit
