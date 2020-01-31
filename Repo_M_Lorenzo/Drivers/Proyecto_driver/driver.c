@@ -29,6 +29,9 @@ void memory_exit(void);
 
 int memory_init(void);
 
+
+
+
 /*Struct de funcions de acceso*/
 
 struct file_operations memory_fops = {
@@ -53,10 +56,17 @@ int memory_major = 60;
 
 char *memory_buffer;
 
+#define TAM 20
+
+char *lectura;
+
 /*Inicializacion dispositivo*/
 
 int memory_init(void) {
 	int result;
+  struct file *archivo;
+  mm_segment_t fs;
+
   /* Registering device */
 	result = register_chrdev(memory_major, "memory", &memory_fops);
 	if (result < 0) {
@@ -64,17 +74,35 @@ int memory_init(void) {
 		return result;
 	}
  /* Allocating memory for the buffer */
-	memory_buffer = kmalloc(1, GFP_KERNEL); 
-	if (!memory_buffer) { 
+	lectura = kmalloc(TAM, GFP_KERNEL);
+	memory_buffer = kmalloc(TAM, GFP_KERNEL);
+	if (!lectura) {
     	result = -ENOMEM;
-    	goto fail; 
-	} 
-	memset(memory_buffer, 0, 1);
-	printk("<1>Inserting memory module\n"); 
+    	memory_exit();
+	return result;
+	}
+	memset(memory_buffer, 0, TAM);
+  	memset(lectura,0,TAM);
+	printk("<1>Inserting memory module\n");
+
+   archivo = filp_open("/Documentos/Repositorio/Drivers/Proyecto_driver/insultator", O_RDONLY, 0);
+    if(archivo == NULL)
+        printk(KERN_ALERT "filp_open error!!.\n");
+    else{
+        // Get current segment descriptor
+        fs = get_fs();
+        // Set segment descriptor associated to kernel space
+        set_fs(get_fs());
+        // Read the file
+        archivo->f_op->read(archivo, lectura, TAM, &archivo->f_pos);
+        // Restore segment descriptor
+        set_fs(fs);
+        // See what we read from file
+        printk(KERN_INFO "lectura:%s\n",lectura);
+    }
+    filp_close(archivo,NULL);
 	return 0;
-	fail: 
-		memory_exit(); 
-		return result;
+
 }
 
 /*Eliminando dispositivo*/
@@ -104,15 +132,15 @@ int memory_release(struct inode *inode, struct file *filp) {
 }
 
 /*Leer dispositivo*/
-ssize_t memory_read(struct file *filp, char *buf, size_t count, loff_t *f_pos) { 
-  /* Transfering data to user space */ 
-  raw_copy_to_user(buf,memory_buffer,1);
-  /* Changing reading position as best suits */ 
-  if (*f_pos == 0) { 
-    *f_pos+=1; 
-    return 1; 
-  } else { 
-    return 0; 
+ssize_t memory_read(struct file *filp, char *buf, size_t count, loff_t *f_pos) {
+  /* Transfering data to user space */
+  raw_copy_to_user(buf,lectura,TAM);
+  /* Changing reading position as best suits */
+  if (*f_pos == 0) {
+    *f_pos+=TAM;
+    return TAM;
+  } else {
+    return 0;
   }
 }
  /*Escribir dispositivo*/
@@ -120,7 +148,7 @@ ssize_t memory_read(struct file *filp, char *buf, size_t count, loff_t *f_pos) {
 ssize_t memory_write( struct file *filp, const char *buf, size_t count, loff_t *f_pos) {
   char *tmp;
   tmp=buf+count-1;
-  raw_copy_from_user(memory_buffer,tmp,1);
+  raw_copy_from_user(lectura,tmp,TAM);
   return 1;
 }
 

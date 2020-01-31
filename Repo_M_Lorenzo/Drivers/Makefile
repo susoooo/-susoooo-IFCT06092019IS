@@ -1,1 +1,1 @@
-obj-m := hola.o
+obj-m := memoria.o
