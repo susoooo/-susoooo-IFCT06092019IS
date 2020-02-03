@@ -12,6 +12,7 @@ class Micoche
     int peso;
     int altura;
     int ancho;
+    int cilindrada;
 
 	public: //De aquí en adelante los miembros son públicos a no ser que se exprese lo contrario
 	int encender(); //Acceso público
