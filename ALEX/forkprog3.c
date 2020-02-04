@@ -1,7 +1,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <fcntl.h>int main()
+#include <fcntl.h>
+int main()
 {
     int i;
     int fd1, fd2;
