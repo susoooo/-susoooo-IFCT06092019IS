@@ -1,0 +1,7 @@
+
+#include <linux/module.h>
+
+MODULE_LICENSE("Dual BSD/GPL");
+
+
+obj-m:=hola.o
