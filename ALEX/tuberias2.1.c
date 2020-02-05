@@ -33,33 +33,21 @@ void main()
                 wait(NULL); 
                 printf("El padre calcula el factorial\n");
                 read(tube1[0], buffer, 299);				
-	 }
-				int contador;
-				int resultado;
-				contador=0;
-				resultado=0;
-					do
+				
+					int contador;
+					int factorial;
+					factorial = 0;
+					contador =0;
+					for(contador=0;contador<=buffer;contador--)
 					{
-						if(buffer>1)
+						if(contador!=0)
 						{
-							contador=buffer;
-							resultado=buffer;
-							while (contador<=buffer && contador>1)
-							{
-								printf(" %d ",contador);
-								contador--;
-								resultado=resultado*contador;
-							}
-							printf("1 = %d \n",resultado);
-						}
-						else
-						{
-							printf("El número debe ser mayor que 1\n");
+						factorial = factorial * contador;
+						printf ("%d",factorial);
 						}
 					}
-					while(buffer<=1);
-
-				
+					return (factorial);
 				
                 printf("\t Mensaje leido: %s \n", buffer);
+     }
 }

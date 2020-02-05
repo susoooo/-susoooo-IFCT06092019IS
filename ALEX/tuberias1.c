@@ -8,6 +8,7 @@ void main()
 {
      int fd[2];
      pid_t pid;
+	 char buffer[300];
 	 pipe(fd); 
      pid = fork();
 	 
