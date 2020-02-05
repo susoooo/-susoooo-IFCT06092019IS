@@ -1,0 +1,1 @@
+cmd_/home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/insultator.mod := { echo  /home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/insultator.o; echo; } > /home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/insultator.mod
