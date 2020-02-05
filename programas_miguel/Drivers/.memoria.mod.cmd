@@ -1,0 +1,1 @@
+cmd_/home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/memoria.mod := { echo  /home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/memoria.o; echo; } > /home/ubuntu1/Documentos/repo_remoto/IFCT06092019IS/programas_miguel/Drivers/memoria.mod
