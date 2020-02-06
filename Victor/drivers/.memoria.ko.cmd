@@ -1,0 +1,1 @@
+cmd_/home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.ko /home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.o /home/victor/Repo02/IFCT06092019IS/Victor/drivers/memoria.mod.o ;  true

@@ -1,0 +1,4 @@
+PrgAlex: ../ALEX/Archivos4.c
+	gcc ../ALEX/Archivos4.c -o prgAlex.out
+clean:
+	rm PrgAlex.out
