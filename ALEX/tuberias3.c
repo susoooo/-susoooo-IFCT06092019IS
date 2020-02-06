@@ -23,7 +23,7 @@ void main()
                 break;
           case 0: 
                 close(fd[0]); 
-                fichero=fopen("insultator.txt","wt");
+                fichero=fopen("insultator.txt","a+");
 				pDatos=malloc(sizeof(char)*1024);
 				if(fichero==0)
 				{
