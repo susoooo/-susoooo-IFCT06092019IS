@@ -1,0 +1,1 @@
+cmd_/home/usuario/Repositorio/IFCT06092019IS/suso_el_profe/nothing.mod := { echo  /home/usuario/Repositorio/IFCT06092019IS/suso_el_profe/nothing.o; echo; } > /home/usuario/Repositorio/IFCT06092019IS/suso_el_profe/nothing.mod
