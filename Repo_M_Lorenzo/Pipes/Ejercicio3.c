@@ -8,14 +8,18 @@
 #define LEER 0 
 #define ESCRIBIR 1
 
+FILE *pfich;
 
 void senhal (int numeroSenhal)
 {
+    printf("-");
+    fflush(stdout);
     switch (numeroSenhal)
     {
         case SIGUSR1:
         {    
             printf("Cerrando proceso\n");
+            fclose(pfich);
             kill(getppid(),SIGUSR2);
             kill(getpid(),SIGTERM);
             break;
@@ -57,14 +61,16 @@ int main()
         }
         case 0: // Hijo
         {   
-            FILE *pfich;
+            
             pfich=fopen("insultator.txt", "r");
             if (pfich==NULL)
             {
                 perror("No hay archivo");
             }
             else
-            {   
+            {  
+                close(t_insulto[LEER]);  
+                
                 while(1)
                 {  
                     if(feof(pfich))
@@ -73,32 +79,38 @@ int main()
                         
                     }
                     
-                    fscanf (pfich,"%s\x0A",insulto_archivo);
+                    fscanf (pfich,"%s",insulto_archivo);
+                    
                     sleep(1);
-                    close(t_insulto[LEER]); 
+                    
                     write(t_insulto[ESCRIBIR],&insulto_archivo,sizeof(char)*30);
                     
                     signal (SIGUSR1,senhal);
-                    break;
+                    
                 }
+                
             }
         }
         default: // Padre
         {
+            close(t_insulto[ESCRIBIR]);
+
             while(1)
             {
-                close(t_insulto[ESCRIBIR]);
+                
+                
                 read(t_insulto[LEER],&insulto,sizeof(char)*30);
+                
                 printf("%s\n",insulto);
                 fflush(stdout);
-                if (strcmp(insulto,"Inutil")==0)
+                if (strcmp(insulto,"Tuzaro")==0)
                 {
                     printf("Xa me cansei de escoitarte\n");
                     fflush(stdout);
                     kill (pid, SIGUSR1);
                 }
                 signal (SIGUSR2,senhal);
-                break;
+                
             }
         }
     }
