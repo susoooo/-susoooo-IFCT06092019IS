@@ -2,3 +2,5 @@
 etc.). Cuando se introducen tres números consecutivos dice “gracias” y termina. Mientras 
 no se introduzcan tres números consecutivos el programa sigue pidiendo números indefinidamente.*/
 
+#include <iostream>
+using namespace std;
