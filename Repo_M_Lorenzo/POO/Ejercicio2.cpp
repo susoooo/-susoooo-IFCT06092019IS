@@ -1,4 +1,11 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <math.h>
 using namespace std;
 
 class Punto
@@ -14,9 +21,11 @@ class Punto
 
 void Punto::coord()
 {
+    srand(time(0));
     x=rand()%10;
     y=rand()%10;
     z=rand()%10;
+    sleep(1);
 }
 
 void Punto::representar()
