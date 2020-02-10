@@ -1,9 +1,12 @@
-#include <netinet/in.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <netdb.h>
+#include <sys/types.h> 
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #define PORTNUMBER 12543
 
@@ -11,7 +14,7 @@
 int main(void)
 {
     char buf[1024];
-    int s, n, len;
+    int s, n, m, len;
     struct sockaddr_in name;
 
     /*Se crea el socket*/
@@ -27,12 +30,13 @@ int main(void)
     bind(s,(struct sockaddr *)&name,len);
 
     /*Se lee del socket hasta el final del  fichero*/
-
-    while((n=recv(s,buf,sizeof(buf),0))>0)
+    while((n=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len))>0)
+    {
     /*se imprimen los datos leidos*/
-        write(stdout,buf,n);
-
-    
+        write(1,buf,n);
+        fflush;
+        sendto(s,buf,n,0,(struct sockaddr*)&name,len);
+    }   
     /*se cierra el socket*/
 
     close(s);
