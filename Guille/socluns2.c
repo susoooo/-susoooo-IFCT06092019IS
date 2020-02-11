@@ -27,9 +27,9 @@ len = sizeof(struct sockaddr_in);
 while((n=read(0,buf,sizeof(buf)))>0)
     {
     sendto(s,buf,n,0,(struct sockaddr*)&name,len);
-    sleep (1);
+    
     recvfrom(s,buf,n,0,(struct sockaddr*)&name,len);
-    printf ("funcionando");
+    
     }
 close(s);
 

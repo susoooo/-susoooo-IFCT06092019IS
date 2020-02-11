@@ -14,6 +14,7 @@ void Punto::Posicionar(int a,int b,int c)
  y = b; 
  z = c;
 }
+
 int main()
   {
     Punto p1, p2, p3;
