@@ -49,7 +49,8 @@ int main(void)
         m=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
         fflush(stdout);
         write(1,buf,m);
-
+        memset(buf,0,1024);
+       
         printf("\n¿Que desea hacer?\n");
         printf("0- Salir\n1- Insultar\n");
         fflush(stdout);
