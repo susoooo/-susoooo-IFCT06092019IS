@@ -8,6 +8,7 @@
 #include <netdb.h>
 #include <string.h>
 
+
 #define PORTNUMBER 12543
 
 int main (void)
@@ -32,11 +33,7 @@ int main (void)
     while ((n=read(0,buf, sizeof(buf)))>0)
     {
         sendto(s, buf, n, 0, (struct sockaddr*) &name, len);
-        recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*) &name, &len);
-        write(1,buf, n);
-        
-        
     }
-    
     close(s);
+
 }
