@@ -24,9 +24,16 @@ int main(void)
     char fechayhora[100];
     int opcion;
     FILE * fichero;
+    FILE * fichero2;
 
     fichero=fopen("insultator.txt","rt");
     if (fichero==NULL)
+    {
+        perror("No hay archivo");
+    }
+
+    fichero2=fopen("Reg_insultator.txt","at");
+    if (fichero2==NULL)
     {
         perror("No hay archivo");
     }
@@ -55,6 +62,7 @@ int main(void)
             {
                 close(s);
                 fclose(fichero);
+                fclose(fichero2);
                 exit(0);
                                
             }
@@ -70,15 +78,17 @@ int main(void)
                 fscanf (fichero,"%s",insulto);
                 t=time(NULL);
                 tm=localtime(&t);
-                strftime(fechayhora, 100, "%d/%m/%Y", tm);
+                strftime(fechayhora, 100, "%d/%m/%Y  %H:%M", tm);
 
-                strcat(buf,"Insultator_servidor ");
+                strcat(buf,"Insultator_Manel ");
                 strcat(buf,fechayhora);
                 strcat(buf," ");
                 strcat(buf,insulto);
                 strcat(buf,"\n");
-                
+                               
                 sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                fwrite(buf,sizeof(char),strlen(buf),fichero2);
+                memset(buf,0,1024);
                 break;
             }
             
@@ -93,6 +103,7 @@ int main(void)
     /*se cierra el socket*/
 
     fclose(fichero);
+    fclose(fichero2);
     close(s);
 
     return(0);

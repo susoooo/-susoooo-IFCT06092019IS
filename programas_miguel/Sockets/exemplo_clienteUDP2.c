@@ -35,8 +35,6 @@ int main (void)
         sendto(s, buf, n, 0, (struct sockaddr*) &name, len);
         recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*) &name, &len);
         write(1,buf, n);
-        
-
     }
     
     close(s);

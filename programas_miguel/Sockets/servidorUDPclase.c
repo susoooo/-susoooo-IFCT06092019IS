@@ -8,8 +8,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
-
 #define PORTNUMBER 12543
 
 int main (void)
@@ -27,13 +25,13 @@ int main (void)
 
     bind(s, (struct sockaddr *) &name, len);
     
-    while ((n=recvfrom(s,buf,sizeof(buf),0,(struct sockadd* restrict)&name, &len))>0)
+    while ((n=recvfrom(s,buf,sizeof(buf),0,(struct sockadd*)&name, &len))>0) //recvfrom recibe mensaxes do socket.
     {
         write(1,buf, n);
-        sendto(s, buf, n, 0, (struct sockaddr*) &name, len);
         
+        n=read(0,buf, sizeof(buf));
+        sendto(s, buf, n, 0, (struct sockaddr*) &name, len);
     }  
 
-    close(s);
-        
+    close(s);        
 }
