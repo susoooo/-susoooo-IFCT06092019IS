@@ -16,15 +16,20 @@
 int main(void)
 {
     char buf[1024];
+    char buf2[1024];
     char insulto[50];
     int s, n, len;
     struct sockaddr_in name;
+    struct sockaddr_in *p;
     time_t t;
     struct tm *tm;
     char fechayhora[100];
     int opcion;
     FILE * fichero;
     FILE * fichero2;
+
+    memset(buf2,0,1024);
+
 
     fichero=fopen("insultator.txt","rt");
     if (fichero==NULL)
@@ -85,10 +90,17 @@ int main(void)
                 strcat(buf," ");
                 strcat(buf,insulto);
                 strcat(buf,"\n");
+
+                strcat(buf2,insulto);
+                strcat(buf2," ");
+                strcat(buf2,inet_ntoa(name.sin_addr));
                                
                 sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
                 fwrite(buf,sizeof(char),strlen(buf),fichero2);
+                write(1,buf2,1024);
                 memset(buf,0,1024);
+                memset(buf2,0,1024);
+
                 break;
             }
             

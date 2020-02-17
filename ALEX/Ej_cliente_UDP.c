@@ -30,9 +30,7 @@ int main(void)
     name.sin_port=htons(PORTNUMBER);
 
     /*Se asigna direccion IP*/
-    //memcpy(&name.sin_addr,hp->h_addr_list[0],hp->h_length);
-    /*Modificacion para contectarse a un servidor en concreto*/
-    inet_aton("192.168.90.160", &name.sin_addr);
+    memcpy(&name.sin_addr,hp->h_addr_list[0],hp->h_length);
     len=sizeof(struct sockaddr_in);
     
     /*Se lee caracteres del teclado*/
