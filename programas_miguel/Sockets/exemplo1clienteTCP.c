@@ -1,4 +1,4 @@
-//Cliente UDP
+//Cliente TCP
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -14,22 +14,30 @@ int main (void)
 {
     int n, s, len;
     char buf[1024];
-   
+    //char hostname[64];
+    //struct hostent *hp;
     struct sockaddr_in name;
    
-    s=socket(PF_INET, SOCK_DGRAM, 0);
+    //gethostname (hostname, sizeof(hostname));
+    //hp=gethostbyname(hostname);
+
+    s=socket(PF_INET, SOCK_STREAM, 0);
     name.sin_family= AF_INET;
     name.sin_port= htons(PORTNUMBER);
 
-    inet_aton("192.168.90.211", &name.sin_addr);
+    inet_aton("127.0.0.1", &name.sin_addr);
+
+    //memcpy(&name.sin_addr, hp->h_addr_list[0], hp->h_length);
     len=sizeof(struct sockaddr_in);
+
+    connect(s,(struct sockaddr *) &name, len);
+
 
     while ((n=read(0,buf, sizeof(buf)))>0)
     {
-        sendto(s, buf, n, 0, (struct sockaddr*) &name, len);
-        sleep(1);
+        send(s, buf, n, 0);
               
     }
     
-    close(s);
+    close(s);    
 }
