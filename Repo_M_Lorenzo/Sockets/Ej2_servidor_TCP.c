@@ -66,10 +66,10 @@ int main(void)
 
     /*Aceptar conexiones*/
 
-    ns=accept(s, (struct socket*)&name,&len);
+    ns=accept(s,(struct sockaddr*)&name,&len);
     
     /*Se lee del socket hasta el final del  fichero*/
-    while((n=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len))>0)
+    while((n=recv(ns,buf,sizeof(buf),0))>0)
     {
     /*se imprimen los datos leidos*/
         opcion=atoi(buf);
@@ -80,13 +80,13 @@ int main(void)
             {
                 /*Pedimos el numero*/
                 sprintf(buf,"0");
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(ns,buf,strlen(buf),0);
 
                 /*Recibimos numero1*/                
-                recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+                recv(ns,buf,sizeof(buf),0);
                 numero1=atoi(buf);
                 /*Recibimos numero2*/
-                recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+                recv(ns,buf,sizeof(buf),0);
                 numero2=atoi(buf);
 
                 /*Calculamos resultado y lo enviamos*/
@@ -97,7 +97,7 @@ int main(void)
                 printf("Resultado: %d\n",res_suma);
                 fflush(stdout);
                 sprintf(buf,"%d",res_suma);
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(ns,buf,strlen(buf),0);
                 break; 
                 
             }
@@ -106,10 +106,10 @@ int main(void)
             {
                 /*Pedimos el numero*/
                 sprintf(buf,"1");
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(ns,buf,strlen(buf),0);
 
                 /*Recibimos numero,calculamos resultado y lo enviamos*/                
-                recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+                recv(ns,buf,sizeof(buf),0);
                 numero1=atoi(buf);
                 printf("Factorial de: %d\n",numero1);
                 fflush(stdout);
@@ -117,7 +117,7 @@ int main(void)
                 printf("Resultado: %ld\n",res_factorial);
                 fflush(stdout);
                 sprintf(buf,"%ld",res_factorial);
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(s,buf,strlen(buf),0);
                 break;
             }
             
