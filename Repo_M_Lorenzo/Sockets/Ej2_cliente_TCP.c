@@ -47,10 +47,10 @@ int main(void)
     {
                
         /*Se copian los datos al socket*/
-        sendto(s,buf,n,0,(struct sockaddr*)&name,len);
+        send(s,buf,n,0);
         
         /*Recibimos la opcion a calcular*/
-        m=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+        m=recv(s,buf,sizeof(buf),0);
         opcion=atoi(buf);
         
         switch (opcion)
@@ -61,15 +61,15 @@ int main(void)
                 fflush(stdout);
                 m=read(0,buf,sizeof(buf));
                 /*enviamos numero1*/
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(s,buf,strlen(buf),0);
                 printf("Introduzca el segundo numero\n");
                 fflush(stdout);
                 m=read(0,buf,sizeof(buf));
                 /*Enviamos numero2*/
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(s,buf,strlen(buf),0);
 
                 /*recibimos resultado*/
-                m=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+                m=recv(s,buf,sizeof(buf),0);
                 printf("El resultado es:");
                 fflush(stdout);
                 write(1,buf,m);
@@ -84,9 +84,9 @@ int main(void)
                 fflush(stdout);
                 m=read(0,buf,sizeof(buf));
                 /*enviamos numero*/
-                sendto(s,buf,strlen(buf),0,(struct sockaddr*)&name,len);
+                send(s,buf,strlen(buf),0);
                 /*recibimos resultado*/
-                m=recvfrom(s,buf,sizeof(buf),0,(struct sockaddr*)&name,&len);
+                m=recv(s,buf,sizeof(buf),0);
                 printf("El resultado es:");
                 fflush(stdout);
                 write(1,buf,m);
