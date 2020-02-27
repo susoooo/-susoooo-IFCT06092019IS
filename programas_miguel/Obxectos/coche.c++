@@ -101,17 +101,17 @@ class MeuCoche
 
     int main()
     {
-      MeuCoche Seat600; //Definición do obxecto a partir da clase
-      int velocidadepasada; //a velocidade que lle pasamos
-      velocidadepasada=0;
+    MeuCoche Seat600; //Definición do obxecto a partir da clase
+    int velocidadepasada; //a velocidade que lle pasamos
+    velocidadepasada=0;
 
-      cout<<"Introduce a velocidade que queres pasar: ";
+    cout<<"Introduce a velocidade que queres pasar: ";
      
-      cin>>velocidadepasada;
+    cin>>velocidadepasada;
     
     Seat600.fabricarcoche();
-      Seat600.regular_vel(velocidadepasada);
-      Seat600.regular_vel(0);
+    Seat600.regular_vel(velocidadepasada);
+    Seat600.regular_vel(0);
      
     }
 

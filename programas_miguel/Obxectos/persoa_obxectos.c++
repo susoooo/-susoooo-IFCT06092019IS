@@ -36,6 +36,7 @@ class Persoa
     Data camposData; //creamos obxecto CamposData para acceder ás variables da clase Data
 
     public:
+    //Creamos construtores que configuraremos despois:
     Persoa();
     Persoa(int DNI);  
     Persoa(char[], char[], char []); //nome, apelido1, apelido2
@@ -44,6 +45,8 @@ class Persoa
     Persoa(int DNI, char[], char[], char[], char [], int, int, int); //int refírese a día, mes e ano
     ~Persoa();
 };
+
+//Comezamos a configuración dos construtores:
 
 Persoa::Persoa()
 {
@@ -81,11 +84,68 @@ Persoa::Persoa(char recollonome[], char recolloapelido1[], char recolloapelido2 
     camposData.entrarAno(2020);
 }
 
-/*TO DO seguir facendo os construtores:*/
+Persoa::Persoa(int recolloDNI, char recollonome[], char recolloapelido1[], char recolloapelido2 [])
+{
+    strcpy(nome,recollonome);
+    strcpy(apelido1,recolloapelido1);
+    strcpy(nome,recolloapelido2);
+    DNI=recolloDNI;
+    strcpy(paisnac,"");
+    camposData.entrarDia(01);
+    camposData.entrarMes(01);
+    camposData.entrarAno(2020);
+}
+
+Persoa::Persoa(int recolloDNI, char recollonome[], char recolloapelido1[], char recolloapelido2 [], char recollopais[])
+{
+    strcpy(nome,recollonome);
+    strcpy(apelido1,recolloapelido1);
+    strcpy(nome,recolloapelido2);
+    DNI=recolloDNI;
+    strcpy(paisnac,recollopais);
+    camposData.entrarDia(01);
+    camposData.entrarMes(01);
+    camposData.entrarAno(2020);
+}
+
+Persoa::Persoa(int recolloDNI, char recollonome[], char recolloapelido1[], char recolloapelido2 [], char recollopais[], int recollodia, int recollomes, int recolloano)
+{
+    strcpy(nome,recollonome);
+    strcpy(apelido1,recolloapelido1);
+    strcpy(nome,recolloapelido2);
+    DNI=recolloDNI;
+    strcpy(paisnac,recollopais);
+    camposData.entrarDia(recollodia);
+    camposData.entrarMes(recollomes);
+    camposData.entrarAno(recolloano);
+}
+
+/*TO DO Falta configurar función para que a clase imprima os datos*/
+   /* void Persoa::imprimirDatos()
+        {
+                
+        }*/
+
+    
+int main() 
+{
+
+   //Creamos os obxectos:
+    Persoa Suso;
+    Persoa Nestor (333444555);
+    Persoa Diego ("Diego","Ruiz","Fernandez");    
+    Persoa JoseM (111222333, "Jose", "Debasa", "Rouco");
+    Persoa Alex (123456789, "Alejandro", "Otero", "Casas", "España");
+    Persoa Guille (987654321, "Guillermo", "Perez", "Lopez","Galiza", 1980, 3, 24);
+    
 
 
 
+    
 
+    
 
+    return 0;
+}
 
 
