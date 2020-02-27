@@ -1,0 +1,6 @@
+peso=input()
+altura=input()
+peso=int(peso)
+altura=float(altura)
+imc=peso/(altura**2)
+print(imc)

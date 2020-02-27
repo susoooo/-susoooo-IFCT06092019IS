@@ -1,0 +1,10 @@
+a=input()
+b=input()
+c=int(a)
+d=int(b)
+if(c>d):
+    print(c)
+elif(d>c):
+    print(d)
+elif(c==d):
+    print("iguales")
