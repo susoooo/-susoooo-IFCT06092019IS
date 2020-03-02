@@ -20,14 +20,21 @@ public:
      { cout << "Avanza moto." << endl; }
 };
 
+class Patinete : public Vehiculo {
+public:
+  void diferente() {cout <<"soy patin."<<endl;}
+};
+
 int main()
 {
   Moto t;
   Coche c;
+  Patinete p;
   
 
   t.avanza();
   c.avanza();
+  p.avanza();
 
   return 0;
 }
