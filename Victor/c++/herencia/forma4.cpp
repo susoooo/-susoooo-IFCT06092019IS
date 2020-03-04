@@ -192,6 +192,9 @@ void Circulo::Imprime()
 int main()
 {
     int i;
+    int imayor;
+    float mayor;
+    mayor=0;
     Forma * miArray[5];
     ClasePunto mipunto(1,2,3);
     Rectangulo r1 ("Verde","Mi rectángulo",4,5,6,9,15);
@@ -225,10 +228,13 @@ int main()
 
     for (i=0;i<5;i++)
     {
-        (*(miArray[i])).CambiarColor("Negro");
-        (*(miArray[i])).MoverForma(0,0,0);
-        (*(miArray[i])).Imprime();
-        cout << "Área: " << (*(miArray[i])).Area() << endl;
-        cout << endl;
+        if(mayor < (*(miArray[i])).Area())
+            {
+                mayor=(*(miArray[i])).Area();
+                imayor=i;
+            }
     }
+    cout << "Área Mayor: " << endl;
+    (*(miArray[imayor])).Imprime();
+    cout << "Área: " << (*(miArray[imayor])).Area() << endl;
 }
