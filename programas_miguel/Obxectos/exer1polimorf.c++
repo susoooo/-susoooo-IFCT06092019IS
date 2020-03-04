@@ -35,6 +35,7 @@ class electrodomestico
     float getNumhoras(void);   
 
 };
+
 //Métodos set (electrodomestico)
  void electrodomestico::setPotencia(float novovalor)
 {
@@ -93,6 +94,8 @@ class radiador : public electrodomestico
 
 int main()
 {
+
+//Creamos obxectos (radiador)
 radiador rad1;
 rad1.setPotencia(300);
 rad1.setConsumo(100);
@@ -108,7 +111,7 @@ rad3.setPotencia(410);
 rad3.setConsumo(140);
 rad3.setNumhoras(19);
 
-
+//Creamos obxectos (lavadora)
 lavadora lava1;
 lava1.setPotencia(120);
 lava1.setConsumo(20);
@@ -124,7 +127,7 @@ lava3.setPotencia(1405);
 lava3.setConsumo(211);
 lava3.setNumhoras(31);
 
-
+//Creamos obxectos (nevera)
 nevera neve1;
 neve1.setPotencia(1268);
 neve1.setConsumo(300);
@@ -147,7 +150,8 @@ cin >> electro;
 
 
 
-//Probamos só con lava1 para comprobar funcionamento:
+//Probamos só con lava1 para comprobar funcionamento
+//Teríamos que facer un if para cada obxecto
 if (electro=="lava1")
 {
     cout<<"O consumo de lava1 é:" << lava1.calcularconsumo()<<endl;
