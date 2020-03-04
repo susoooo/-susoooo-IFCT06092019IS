@@ -1,7 +1,6 @@
-/*2-A partir de la clase asalariado, define ahora un par de clases: obrero y médico. En la clase obrero, guarda el nombre del cargo
- que desempeña. Para la clase médico, guarda información sobre la cantidad de pacientes que tiene a su cargo. Crea los constructores
- y metodos get y set que creas necesarios.*/
-
+/*3-Crea un programa que, utilizando las clases anteriores, cree un objeto para almacenar datos sobre una persona que no es asalariada, 
+un asalariado que no es médico ni obrero, sobre dos asalariados y sobre un médico. Todos los objetos creados deberán contener datos 
+en sus propiedades. Haz que el programa muestre los datos de los distintos objetos creados por pantalla.*/
 
 #include <iostream>
 #include <string>
@@ -24,7 +23,51 @@ class Persoa
     void reproducirse();
     void falar();  
     void fliparse();
+    //Construtor:
+    Persoa();
+    Persoa(int DNI, char nome[]);
+    //set e get:
+    void setDNI(int novovalor); 
+    int getDNI(void);  
+    void setNome(char novovalor[]); 
+    char * getNome(void); 
 };
+
+//Configuración do construtor (Persoa):
+Persoa::Persoa()
+{
+    DNI=0; 
+    strcpy(nome,"");    
+}
+
+Persoa::Persoa(int recolloDNI, char recollonome[])
+{
+    DNI=recolloDNI;
+    strcpy(nome, recollonome); 
+}
+
+//Métodos set e get (Persoa)
+
+void Persoa::setNome(char novovalor[])
+{
+	strcpy(nome, novovalor); 
+}
+
+char * Persoa::getNome(void)
+{
+	return nome;
+}
+
+void Persoa::setDNI(int novovalor)
+{
+	DNI = novovalor;
+}
+
+int  Persoa::getDNI(void)
+{
+	return DNI;
+}
+
 
 // Clase derivada Asalariado:
 class Asalariado : public Persoa {
@@ -149,6 +192,7 @@ int main()
 
     Obrero Jose ("Limpiador");
     Medico Luis (60);
+    Persoa Lorito (123456789, "Lorito");
 
 //Usamos get e set
 	
@@ -164,6 +208,13 @@ int main()
 
     Luis.setnumPacientes(65);
     cout<<Luis.getnumPacientes()<<endl;
+
+    Lorito.setDNI(987654321);
+    cout<<Lorito.getDNI()<<endl;
+
+    Lorito.setNome("Lorazo");
+    cout<<Lorito.getNome()<<endl;
+
     
   return(0);
 }
