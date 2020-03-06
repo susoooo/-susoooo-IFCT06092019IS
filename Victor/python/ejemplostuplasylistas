@@ -1,0 +1,104 @@
+TUPLAS
+
+a =(1,"b",True)
+a[0]
+>1
+a[1]
+>'b'
+a[2]
+>True
+
+len((1,"b",True))
+>3
+
+b =(1,2,3,"prueba")
+a+b
+>(1, 'b', True, 1, 2, 3, 'prueba')
+
+a*2
+>(1, 'b', True, 1, 'b', True)
+
+7 in a
+>False
+
+7 in a == print("está")
+>está
+>False
+
+1 in a
+>True
+
+c=a+b
+c
+>(1, 'b', True, 1, 2, 3, 'prueba')
+c.count(1)
+>3
+c.count(2)
+>1
+c.count(True)
+>3
+
+c.index(3)
+>5
+
+c[4]
+>2
+
+c[1:3]
+>('b', True)
+
+---------------------------------------
+
+LISTAS
+
+fecha = ["Lunes", 27, "Octubre", 1997]
+fecha
+>['Lunes', 27, 'Octubre', 1997]
+
+fecha[0]="Martes"
+fecha
+>['Martes', 27, 'Octubre', 1997]
+
+fecha = ["Lunes", 27, "Octubre", 1997,[1,2,3,4,5]]
+fecha[4][2]
+>3
+
+fecha=fecha+["a","b","c"]
+fecha
+>['Lunes', 27, 'Octubre', 1997, [1, 2, 3, 4, 5], 'a', 'b', 'c']
+
+fecha=fecha+[["a","b","c"]]
+fecha
+>['Lunes', 27, 'Octubre', 1997, [1, 2, 3, 4, 5], 'a', 'b', 'c', ['a', 'b', 'c']]
+
+nombre = "Pepe"
+edad = 25
+lista = [nombre, edad]
+lista
+>['Pepe', 25]
+nombre = "Juan"
+lista
+>['Pepe', 25]
+
+x = range(10)
+x
+>range(0, 10)
+list(x)
+>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+list(range(7))
+>[0, 1, 2, 3, 4, 5, 6]
+
+list(range(-5,1))
+>[-5, -4, -3, -2, -1, 0]
+
+list(range(5, 21, 3))
+>[5, 8, 11, 14, 17, 20]
+
+list(range(10, 0, -2))
+>[10, 8, 6, 4, 2]
+
+list(range(3)) + list(range(5))
+>[0, 1, 2, 0, 1, 2, 3, 4]
+
+
