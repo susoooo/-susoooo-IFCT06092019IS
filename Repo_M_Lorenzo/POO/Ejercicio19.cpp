@@ -359,12 +359,12 @@ int main()
     cuad.imprimir();
 
     array[0]=&rects;
-    array[1]=&circ;
+    array[1]=&cuad;
     array[2]=&cuad;
     int i;
     for(i=0;i<3;i++)
     {
-        array[i].imprimir();
+        ((rectangulo*)array[i])->imprimir();
 
     }
 
