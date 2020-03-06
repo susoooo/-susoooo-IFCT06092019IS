@@ -54,10 +54,10 @@ class Ropa : public Tiendas {
 class Comida : public Tiendas {
   public:
    Comida(int e );
-   int LeerNmLineas() const;
-   int LeerNmCajas() const;
-   void CambiarNmLineas(const int);
-   void CambiarNmCajasconst int);
+   int LeerNmLineas();
+   int LeerNmCajas();
+   void CambiarNmLineas(int);
+   void CambiarNmCajasconst (int);
 
    protected:
    int nmlineas;
@@ -87,15 +87,25 @@ class Droguerias : public Tiendas {
 class Bares : public Hosteleria {
   public:
    Bares(int e );
-   int LeerNmBarras() const;
-   void CambiarNmBarras(const int);
+   int LeerNmBarras();
+   void CambiarNmBarras(int);
+
+   protected:
+   int nmbarras;
 };
 // Clase derivada Restaurantes:
 class Restaurantes : public Hosteleria {
   public:
    Restaurantes(int e );
-   int LeerNmBarras() const;
-   void CambiarNmBarras(const int);
+   int LeerNmBarras();
+   float LeerMtCom();
+   float
+
+   float LeerMtCom
+   float LeerMtcoci;
+   void CambiarNmBarras(int);
+   protected:
+   int nmbarras;
 };   
    int main()
     {

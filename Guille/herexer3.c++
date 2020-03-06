@@ -40,14 +40,32 @@ class Omnivoros : public Animal {
 //Clase derivada Conejo:
 class Conejo : public Herbivoros {
   public:
-   void Reproducirse(char n);
+   void Multireproducirse(char n);
    void Hacersonido;
 };
 //Clase derivada Leon:
 class Leon : public Carnivoros {
   public:
    Leon(int)
-   melena (int)
    void Reproducirse(char n);
    void Hacersonido;
 };   
+//Clase derivada Hiena:
+class Hiena : public Carnivoros {
+  public:
+   Hiena(int)
+   void Reirse(char n);
+   void Hacersonido;
+};
+//Clase derivada Hiena:
+class Humano : public Omnivoros {
+  public:
+   Humano(int)
+   void Reirse(char n);
+   void Hacersonido;
+   void Multiconocimiento;
+}
+   int main()
+      {
+       return (0);
+      }
