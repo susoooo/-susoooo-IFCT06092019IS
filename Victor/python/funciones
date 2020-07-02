@@ -1,0 +1,110 @@
+2. Crea un programa en C que tenga una función que dado un valor en Euros devuelva el valor en Dolares . Considere usar funciones. Sabiendo que 01 Euro Equivale Actualmente a 1,17 Dolares.
+
+def euros(eu):
+	e=float(eu)
+	res=e*1.17
+	return res
+
+eur=input()
+euros(e)
+
+
+4. Diseñe un programa, que muestre el mayor y el menor de tres introducidos por el usuario. Desarrolle 02 Funciones una para calcular el número mayor y otra para calcular el número menor.
+
+def fmayor(parametro1, parametro2, parametro3):
+	if (parametro1 > parametro2 and parametro1 > parametro3):
+		mayor=parametro1
+	else:
+		if (parametro2 > parametro1 and parametro2 > parametro3):
+			mayor=parametro2
+		else:
+			mayor=parametro3	
+	return mayor	
+
+def fmenor(par1, par2, par3):
+	if (par1 < par2 and par1 < par3):
+		menor=par1
+	else:
+		if (par2 < par1 and par2 < par3):
+			menor=par2
+		else:
+			menor=par3	
+	return menor	
+
+a=input()
+b=input()
+c=input()
+a1=int(a)
+b1=int(b)
+c1=int(c)
+fmayor(a1,b1,c1)
+fmenor(a1,b1,c1)
+
+0. Escriba una función llamada “multiplicación” que reciba como argumento cuatro números reales distintos de cero y que regrese el producto de ellos.
+
+def multiplicacion(a1, a2, a3, a4):
+	if (not(a1==0) and not(a2==0) and not(a3==0) and not(a4==0)):
+		res=a1*a2*a3*a4
+		return res
+	else:
+		print ("Has introducido un 0")
+		return
+
+a=input()
+b=input()
+c=input()
+d=input()
+a1=int(a)
+b1=int(b)
+c1=int(c)
+d1=int(d)
+multiplicacion(a1,b1,c1,d1)
+
+
+6. Realizar una función llamada media2, que toma dos números reales como parámetros, y devuelve un número real que es la media de los dos números pasados como parámetros.
+
+import statistics
+def media2(a1, a2):
+	return statistics.mean([a1,a2])
+
+a=input()
+b=input()
+a1=int(a)
+b1=int(b)
+media2(a1,b1)
+
+
+9. Crear una función que compruebe si el numero que se le pasa como parámetro es o no primo. Si es, devolverá un 1, y si no lo es, devolverá un 0.
+
+def primo(parametro1):
+	contador=2
+	if(parametro1==2):
+		resultado=1	
+	else:
+		while contador < parametro1:
+			if(parametro1 % contador==0):
+				resultado=0
+				contador=parametro1
+			else:
+				resultado=1	
+				contador+=1
+	return resultado
+	
+a=input()
+a1=int(a)
+primo(a1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
