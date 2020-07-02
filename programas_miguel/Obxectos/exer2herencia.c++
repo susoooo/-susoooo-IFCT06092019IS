@@ -55,7 +55,6 @@ Asalariado::Asalariado(int recolloSueldoneto, int recolloRetencion)
     Retencion=recolloRetencion;   
 }
 
-
 //Métodos set e get (Asalariado)
 void Asalariado::setSueldoneto(int novovalor)
 {
@@ -86,16 +85,10 @@ class Obrero : public Asalariado
     char Cargo[15];
 
     public: //Construtor:
-    Obrero(char[]);   
-};
-
-// Clase derivada Medico:
-class Medico : public Asalariado 
-{
-    int numPacientes;
-
-    public: //Construtor:
-    Medico(int);
+    Obrero(char[]);
+    //set e get:
+    void setCargo(char novovalor[]); 
+    char * getCargo(void);  
 };
 
 //Configuración do construtor (Obrero):
@@ -104,19 +97,47 @@ Obrero::Obrero(char recolloCargo[])
     strcpy(Cargo, recolloCargo); 
 }
 
-//Configuración dos construtores (Medico)
+
+//Métodos set e get (Obrero)
+void Obrero::setCargo(char novovalor[])
+{
+	strcpy(Cargo, novovalor); 
+}
+
+char * Obrero::getCargo(void)
+{
+	return Cargo;
+}
+
+
+// Clase derivada Medico:
+class Medico : public Asalariado 
+{
+    int numPacientes;
+
+    public: //Construtor:
+    Medico(int);
+    //set e get:
+    void setnumPacientes(int novovalor); 
+    int getnumPacientes(void);  
+};
+
+//Configuración do construtor (Médico)
 Medico::Medico(int recolloNumPac)
 {
 numPacientes=recolloNumPac;
 }
 
-/*TO DO Configurar os métodos get e set*/
-
-//Métodos set e get (Obrero)
-
-
-
 //Métodos set e get (Medico)
+void Medico::setnumPacientes(int novovalor)
+{
+	numPacientes = novovalor;
+}
+
+int  Medico::getnumPacientes(void)
+{
+	return numPacientes;
+}
 
 
 int main()
@@ -126,14 +147,23 @@ int main()
     Asalariado Pepe;
     Asalariado Pepa (1200, 15);
 
+    Obrero Jose ("Limpiador");
+    Medico Luis (60);
+
 //Usamos get e set
-Asalariado obj;
 	
-	obj.setSueldoneto(1300);
-	cout<<obj.getSueldoneto()<<endl;
+	Pepe.setSueldoneto(1300);
+	cout<<Pepe.getSueldoneto()<<endl;
 
-	obj.setRetencion(17);
-	cout<<obj.getRetencion()<<endl;
+	Pepa.setRetencion(17);
+	cout<<Pepa.getRetencion()<<endl;
 
+
+    Jose.setCargo("Cociñeiro");
+    cout<<Jose.getCargo()<<endl;
+
+    Luis.setnumPacientes(65);
+    cout<<Luis.getnumPacientes()<<endl;
+    
   return(0);
 }

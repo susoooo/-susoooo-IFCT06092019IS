@@ -1,0 +1,82 @@
+1-Escribe un programa que cree una lista de palabras. Primero debe pedir por pantalla el número de elementos a incluir en la lista, pedir tantas palabras como se haya dicho en ese número, y crear una lista con dichas palabras.
+
+print("¿Cuántas palabras va a introducir?")
+numero=input()
+n=int(numero)
+lista = list (range(n))
+for i in range(0,n):
+	lista[i]=input()
+
+
+2-Amplia el programa anterior, para que una vez creada la lista, se pida por pantalla una palabra y se diga cuantas veces aparece dicha palabra en la lista.
+
+print("¿Cuántas palabras va a introducir?")
+numero=input()
+n=int(numero)
+lista = list (range(n))
+for i in range(0,n):
+	lista[i]=input()
+print("Introduce la palabra a buscar:")
+palabra=input()
+print ("La palaba aparece ", lista.count(palabra), " veces")
+
+
+3-Amplia el programa anterior para que, una vez encontrada una palabra, pida otra palabra, y substituya la segunda palabra por la primera en la lista inicial.
+
+print("¿Cuántas palabras va a introducir?")
+numero=input()
+n=int(numero)
+lista = list (range(n))
+for i in range(0,n):
+	lista[i]=input()
+print("Introduce la palabra a buscar:")
+palabra=input()
+print ("La palaba aparece ", lista.count(palabra), " veces")
+print("Introduce la palabra que sustituirá a ", palabra)
+palabra2=input()
+lista[lista.index(palabra)]=palabra2
+
+
+4-Crea un programa que pida un número por pantalla. A continuación pida tantos nombres de personas como el número que se ha escrito por pantalla,y cree con ellos una lista. A continuación pedirá otro número, y otra vez tantos nombres como indique ese segundo número. Este segundo grupo de nombres los guardará en otra lista. A continuación, eliminará de la primera lista, aquellos nombres que se encuentren en la segunda lista. Finalmente imprimirá como ha quedado la primera lista.
+
+print("¿Cuántos nombres va a introducir?")
+numero=input()
+n=int(numero)
+lista = list (range(n))
+for i in range(0,n):
+	lista[i]=input()
+print("¿Cuántos nombres va a introducir?")
+numero2=input()
+n2=int(numero2)
+lista2 = list (range(n2))
+for i in range(0,n2):
+	lista2[i]=input()
+for i in range(0,n):
+	for i in range(0,n2):
+		if ((lista2[i] in lista) == True):
+			lista[lista.index(lista2[i])]="Eliminado"
+for i in range(0,n):
+	for i in range(0,n):
+		if ((lista[i])=="Eliminado"):
+			if (i<(n-1)):		
+				lista[i]=lista[i+1]
+				lista[i+1]="Eliminado"
+lista3 = list (range(n-(lista.count("Eliminado"))))
+for i in range(0,len(lista3)):
+	lista3[i]=lista[i]
+lista=lista3
+print(lista)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

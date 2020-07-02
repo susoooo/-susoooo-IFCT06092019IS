@@ -34,10 +34,10 @@ if (fork()==0)
         //contador++;
         }
         //while (!(insultos[contador-5]=='P' &&\
-        insultos[contador-4]=='a' &&\
-        insultos[contador-3]=='r' &&\
-        insultos[contador-2]=='v' &&\
-        insultos[contador-1]=='o'));
+        piropos[contador-4]=='a' &&\
+        piropos[contador-3]=='r' &&\
+        piropos[contador-2]=='v' &&\
+        piropos[contador-1]=='o'));
         while(!feof(manejadorarchivo));
     }
     else
@@ -46,19 +46,19 @@ if (fork()==0)
        do
         {
           read(descr[LEER],&piropos[contador],sizeof (char));
-          if (piropos[contador]==',')
+          if (piropos[contador]=='.')
              {
-             usleep(1000000);
+             usleep(5000000);
              }
           printf("%c",piropos[contador]);
           fflush(stdout);
           contador++;     
          }
-         while (!(piropos[contador-5]=='G' &&\
+         while (!(piropos[contador-5]=='M' &&\
                  piropos[contador-4]=='u' &&\
-                 piropos[contador-3]=='a' &&\
-                 piropos[contador-2]=='p' &&\
-                 piropos[contador-1]=='a'));
+                 piropos[contador-3]=='u' &&\
+                 piropos[contador-2]=='a' &&\
+                 piropos[contador-1]=='k'));
                  
         }
         

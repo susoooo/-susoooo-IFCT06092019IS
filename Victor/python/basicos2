@@ -1,0 +1,205 @@
+1-Escriba un programa que pida dos números enteros y que calcule su división, escribiendo si la división es exacta o no.
+
+a=input()
+b=input()
+c=int(a)
+d=int(b) 
+res=c/d
+r=int(res)
+if((res-r)==0.0):
+	res
+	print("La división es exacta")
+else:
+	res
+	print("La división no es exacta")
+
+
+2-Mejore el programa anterior haciendo que tenga en cuenta que no se puede dividir por cero
+
+a=input()
+b=input()	
+c=int(a)
+d=int(b)
+if(d==0):
+	print("No se puede dividir entre 0")
+else: 
+	res=c/d
+	r=int(res)
+	if((res-r)==0.0):
+		res
+		print("La división es exacta")
+	else:
+		res
+		print("La división no es exacta")
+
+
+3-Escriba un programa que pida dos números y que conteste cuál es el menor y cuál el mayor o que escriba que son iguales.
+
+a=input()
+b=input()	
+c=float(a)
+d=float(b)
+if(c>d):
+	print(c," es mayor que ",d)
+else: 
+	if(c<d):
+		print(d," es mayor que ",c)
+	else:
+		print(d," es igual que ",c)
+
+
+4-Escriba un programa que pida el año actual y un año cualquiera y que escriba cuántos años han pasado desde ese año o cuántos años faltan para llegar a ese año.
+
+actual=input()
+otro=input()	
+c=int(actual)
+d=int(otro)
+if(c>d):
+	res=c-d
+	print("Han pasado ",res," años")
+else: 
+	res=d-c
+	print("Faltan ",res," años")
+
+
+5-Mejore el programa anterior haciendo que cuando la diferencia sea exactamente un año, escriba la frase en singular
+
+actual=input()
+otro=input()	
+c=int(actual)
+d=int(otro)
+if(c>d):
+	res=c-d
+	if(res==1):
+		print("Ha pasado ",res," año")
+	else:
+		print("Han pasado ",res," años")
+else: 
+	res=d-c
+	if(res==1):
+		print("Falta ",res," año")
+	else:
+		print("Faltan ",res," años")
+
+
+6-Escriba un programa que pida dos números enteros y que escriba si el mayor es múltiplo del menor.
+
+a=input()
+b=input()	
+c=int(a)
+d=int(b)
+if(c>d):
+	if (c % d == 0):
+		print(c," es múltiplo de ",d)
+	else:
+		print(c," no es múltiplo de ",d)
+else: 
+	if(c<d):
+		if (d % c == 0):
+			print(d," es múltiplo de ",c)
+		else:
+			print(d," no es múltiplo de ",c)
+	else:
+		print(d," es igual que ",c)
+
+
+7-Mejore el programa anterior haciendo que el programa avise cuando se escriben valores negativos o nulos.
+
+a=input()
+b=input()	
+c=int(a)
+d=int(b)
+if(c<0 or d<0 or a=="" or b==""):
+	print("Se ha introducido algún valor negativo o nulo")
+else:
+	if(c>d):
+		if (c % d == 0):
+			print(c," es múltiplo de ",d)
+		else:
+			print(c," no es múltiplo de ",d)
+	else: 
+		if(c<d):
+			if (d % c == 0):
+				print(d," es múltiplo de ",c)
+			else:
+				print(d," no es múltiplo de ",c)
+		else:
+			print(d," es igual que ",c)
+
+
+8-Escriba un programa que pida tres números y que escriba si son los tres iguales, si hay dos iguales o si son los tres distintos.
+
+a=input()
+b=input()
+c=input()	
+d=float(a)
+e=float(b)
+f=float(c)
+if(d==e and e==f):
+	print(d,e,f," Los tres número son iguales.")
+else: 
+	if(d==e and (not(e==f))):
+		print(d,e,f," Dos de los números son iguales.")
+	else:
+		if(d==f and (not(e==d))):
+			print(d,e,f," Dos de los números son iguales.")
+		else:
+			
+			print(d,e,f," Los números son distintos.")
+
+
+9- Escriba un programa que pida un año y que escriba si es bisiesto o no. Se recuerda que los años bisiestos son múltiplos de 4, pero los múltiplos de 100 no lo son, aunque los múltiplos de 400 sí.
+
+ano=input()	
+a=int(ano)
+if (a % 4 == 0):
+	if (a % 100 == 0):
+		if (a % 400 == 0):	
+			print(a," es bisiesto")
+		else:
+			print(a," no es bisiesto")
+	else:
+		print(a," es bisiesto")			
+else:
+	if (a % 400 == 0):
+		if (a % 100 == 0):
+			print(a," no es bisiesto")
+		else:
+			print(a," es bisiesto")
+	else:
+		print(a," no es bisiesto")
+
+
+10-Escriba un programa que pregunte primero si se quiere calcular el área de un triángulo o la de un círculo. Si se contesta que se quiere calcular el área de un triángulo (escribiendo T o t), el programa tiene que pedir entonces la base y la altura y escribir el área. Si se contesta que se quiere calcular el área de un círculo (escribiendo C o c), el programa tiene que pedir entonces el radio y escribir el área. Se recuerda que el área de un triángulo es base por altura dividido por 2 y que el área de un círculo es Pi (aproximadamente 3,141592) por el radio al cuadrado.
+Nota: Utilice como valor de pi el valor 3.141592.
+
+print("Introduzca 'c' o 'C' para calcular el área de un círculo o 'T' o 't' para calcular el área de un triángulo")
+opcion=input()
+if (opcion == "C" or opcion == "c"):
+	print("Introduzca radio del círculo")
+	radio=input()
+	r=float(radio)
+	res=3.141592*(r*r)
+	res		
+else:
+	if (opcion == "T" or opcion == "t"):
+		print("Introduzca base del triángulo")
+		base=input()
+		print("Introduzca altura del triángulo")
+		altura=input()
+		b=float(base)
+		a=float(altura)
+		res=(b*a)/2
+		res
+	else:
+		print("Opción incorrecta")
+
+
+
+
+
+
+
+
+
+
