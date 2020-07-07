@@ -6,7 +6,6 @@
 package media;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 /**
  *
@@ -21,21 +20,17 @@ public class Media {
         // TODO code application logic her
          Scanner in = new Scanner(System.in);
         int opcion;
-        float notas[];
-        notas = new float[40];
-        float mayor;
-        float menor;
-        float media;
+        double notas[];
+        notas = new double[5];
+        double mayor;
+        double menor;
+        double media;
         int i;
         media=0;
-        System.out.println("Introducir calificacion del");
-        for(i=0;i<40;i++)
+        System.out.println("Introducir calificacion del alumno ");
+        for(i=0;i<5;i++)
         {
-            notas[i] =0;
-        }
-        for(i=0;i<40;i++)
-        {
-            notas[i] = (float)(Math.random()*10);
+         notas[i] = in.nextDouble();
         }
         
         do{
@@ -51,7 +46,7 @@ public class Media {
         {
             case 1: 
             {
-                for(i=0;i<40;i++)
+                for(i=0;i<5;i++)
                 {
                     System.out.println(notas[i]);
                 }
@@ -60,18 +55,18 @@ public class Media {
 				
             case 2:
             {
-                for(i=0;i<40;i++)
+                for(i=0;i<5;i++)
                 {
-                    media=media+notas[i];
+                    media = media +notas[i];
                 }
-                media=media/40;
+                media=media/5;
                 System.out.println("La nota media es: " + media);
                 break;
             }
             case 3: 
             {
                 mayor=0;
-                for(i=0;i<40;i++)
+                for(i=0;i<5;i++)
                 {
                     if (notas[i]>mayor)
                     {
@@ -85,7 +80,7 @@ public class Media {
             case 4:
             {
                 menor=10;
-                for(i=0;i<40;i++)
+                for(i=0;i<5;i++)
                 {
                     if (notas[i]<menor)
                     {
