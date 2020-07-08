@@ -21,6 +21,8 @@ public class Cambio_$a€ {
 
         System.out.println("Ingrese el importe en $: ");
         double dolar = in.nextInt();
+        
+        in.close();
 
         double euro = dolar*1.33250;
         
