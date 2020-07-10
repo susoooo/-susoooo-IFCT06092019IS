@@ -60,7 +60,7 @@ class rectangulo extends forma
     }
     public String mostrar()
     {
-        return super.imprimir()+" "+this.l_mayor+" "+this.l_menor+"\n";
+        return super.imprimir()+"Lado mayor: "+this.l_mayor+"\n"+"Lado menor: "+this.l_menor;
     }
 }
 
@@ -80,7 +80,7 @@ class elipse extends forma
     }
     public String mostrar()
     {
-        return super.imprimir()+" "+this.r_mayor+" "+this.r_menor+"\n";
+        return super.imprimir()+"Radio mayor: "+this.r_mayor+"\n"+"Radio menor: "+this.r_menor;
     }
 }
 class cuadrado extends rectangulo
@@ -92,6 +92,10 @@ class cuadrado extends rectangulo
         super(col,nom,x,y,lmen,lmay);
         this.lado=lmen;
         this.lado=lmay;
+    }
+    public String mostrar_cuadrado()
+    {
+        return super.imprimir()+"Lado: "+this.lado;
     }
         
 }
@@ -105,6 +109,10 @@ class circulo extends elipse
         super(col,nom,x,y,rmen,rmay);
         this.radio=rmay;
         this.radio=rmen;
+    }
+    public String mostrar_circulo()
+    {
+        return super.imprimir()+"Radio: "+this.radio;
     }
 }
 
@@ -130,16 +138,20 @@ public class Ej7_objetos {
         
         
         System.out.println(f1.imprimir());
-        System.out.println("Area: "+r1.area());
-        System.out.println("Perimetro: "+r1.perimetro());
+        
         System.out.println(r1.mostrar());
-        System.out.println("Area: "+e1.area());
+        System.out.println("Area: "+r1.area());
+        System.out.println("Perimetro: "+r1.perimetro()+"\n");        
+        
         System.out.println(e1.mostrar());
+        System.out.println("Area: "+e1.area()+"\n");
+        
+        System.out.println(c1.mostrar_cuadrado());
         System.out.println("Area: "+c1.area());
-        System.out.println("Perimetro: "+c1.perimetro());
-        System.out.println(c1.mostrar());
-        System.out.println("Area: "+cr1.area());
-        System.out.println(cr1.mostrar());
+        System.out.println("Perimetro: "+c1.perimetro()+"\n");
+        
+        System.out.println(cr1.mostrar_circulo());
+        System.out.println("Area: "+cr1.area()+"\n");
         
         
         
