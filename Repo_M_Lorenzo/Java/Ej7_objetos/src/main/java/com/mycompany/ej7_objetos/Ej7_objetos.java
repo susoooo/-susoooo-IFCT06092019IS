@@ -60,7 +60,7 @@ class rectangulo extends forma
     }
     public String mostrar()
     {
-        return super.imprimir()+" "+this.l_mayor+" "+this.l_menor+"\n";
+        return super.imprimir()+"Lado mayor: "+this.l_mayor+"\n"+"Lado menor: "+this.l_menor;
     }
 }
 
@@ -80,7 +80,7 @@ class elipse extends forma
     }
     public String mostrar()
     {
-        return super.imprimir()+" "+this.r_mayor+" "+this.r_menor+"\n";
+        return super.imprimir()+"Radio mayor: "+this.r_mayor+"\n"+"Radio menor: "+this.r_menor;
     }
 }
 class cuadrado extends rectangulo
@@ -92,6 +92,10 @@ class cuadrado extends rectangulo
         super(col,nom,x,y,lmen,lmay);
         this.lado=lmen;
         this.lado=lmay;
+    }
+    public String mostrar_cuadrado()
+    {
+        return super.imprimir()+"Lado: "+this.lado;
     }
         
 }
@@ -105,6 +109,10 @@ class circulo extends elipse
         super(col,nom,x,y,rmen,rmay);
         this.radio=rmay;
         this.radio=rmen;
+    }
+    public String mostrar_circulo()
+    {
+        return super.imprimir()+"Radio: "+this.radio;
     }
 }
 
@@ -122,24 +130,28 @@ public class Ej7_objetos {
         cuadrado c1;
         circulo cr1;
         
-        f1=new forma("Rojo","Forma 1", 3,3);
-        r1=new rectangulo("Azul","Rectangulo 1",0,1,5,8);
-        e1=new elipse("Verde","Elipse 1", 2,3,4,5);
-        c1=new cuadrado("Amarillo","Cuadrado 1", 0,0,3,3);
-        cr1=new circulo("Negro","Circulo 1", 9,4, 2,2);
+        f1=new forma("Rojo","Forma 1", 3,3);//Color,nombre,centro(x,y)
+        r1=new rectangulo("Azul","Rectangulo 1",0,1,5,8);//Color,nombre,centro(x,y),l menor, l mayor
+        e1=new elipse("Verde","Elipse 1", 2,3,4,5);//Color, nombre,centro(x,y), r menor, r mayor
+        c1=new cuadrado("Amarillo","Cuadrado 1", 0,0,3,3);//Color,nombre,centro(x,y),lado,lado
+        cr1=new circulo("Negro","Circulo 1", 9,4, 2,2);//Color,nombre,centro(x,y),radio,radio
         
         
         System.out.println(f1.imprimir());
-        System.out.println("Area: "+r1.area());
-        System.out.println("Perimetro: "+r1.perimetro());
+        
         System.out.println(r1.mostrar());
-        System.out.println("Area: "+e1.area());
+        System.out.println("Area: "+r1.area());
+        System.out.println("Perimetro: "+r1.perimetro()+"\n");        
+        
         System.out.println(e1.mostrar());
+        System.out.println("Area: "+e1.area()+"\n");
+        
+        System.out.println(c1.mostrar_cuadrado());
         System.out.println("Area: "+c1.area());
-        System.out.println("Perimetro: "+c1.perimetro());
-        System.out.println(c1.mostrar());
-        System.out.println("Area: "+cr1.area());
-        System.out.println(cr1.mostrar());
+        System.out.println("Perimetro: "+c1.perimetro()+"\n");
+        
+        System.out.println(cr1.mostrar_circulo());
+        System.out.println("Area: "+cr1.area()+"\n");
         
         
         
