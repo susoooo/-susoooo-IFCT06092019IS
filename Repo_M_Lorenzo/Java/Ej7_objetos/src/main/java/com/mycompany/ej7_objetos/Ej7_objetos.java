@@ -130,11 +130,11 @@ public class Ej7_objetos {
         cuadrado c1;
         circulo cr1;
         
-        f1=new forma("Rojo","Forma 1", 3,3);
-        r1=new rectangulo("Azul","Rectangulo 1",0,1,5,8);
-        e1=new elipse("Verde","Elipse 1", 2,3,4,5);
-        c1=new cuadrado("Amarillo","Cuadrado 1", 0,0,3,3);
-        cr1=new circulo("Negro","Circulo 1", 9,4, 2,2);
+        f1=new forma("Rojo","Forma 1", 3,3);//Color,nombre,centro(x,y)
+        r1=new rectangulo("Azul","Rectangulo 1",0,1,5,8);//Color,nombre,centro(x,y),l menor, l mayor
+        e1=new elipse("Verde","Elipse 1", 2,3,4,5);//Color, nombre,centro(x,y), r menor, r mayor
+        c1=new cuadrado("Amarillo","Cuadrado 1", 0,0,3,3);//Color,nombre,centro(x,y),lado,lado
+        cr1=new circulo("Negro","Circulo 1", 9,4, 2,2);//Color,nombre,centro(x,y),radio,radio
         
         
         System.out.println(f1.imprimir());
