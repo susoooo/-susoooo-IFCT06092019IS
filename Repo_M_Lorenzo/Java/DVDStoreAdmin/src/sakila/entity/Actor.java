@@ -1,5 +1,5 @@
 package sakila.entity;
-// Generated 13 jul. 2020 19:52:37 by Hibernate Tools 4.3.1
+// Generated 15 jul. 2020 18:41:25 by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
