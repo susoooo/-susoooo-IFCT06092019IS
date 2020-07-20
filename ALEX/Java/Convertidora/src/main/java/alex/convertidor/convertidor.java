@@ -35,6 +35,7 @@ public class convertidor extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Convertidor de moneda");
 
         jLabel1.setText("DOLAR $");
 
@@ -89,7 +90,9 @@ public class convertidor extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      
-        if (this.dolar.getText().isBlank())
+        if (this.dolar.getText().length()!=0)/*cuando queramos una condicion con el jtextField vacio debemos hacer exactamente esto
+            if(jtextfield.getText().lemgth()!=0(o ==0))*/
+            
         {
             Float resultado=Float.parseFloat(this.dolar.getText());
             resultado=(resultado*87/100);
