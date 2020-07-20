@@ -56,6 +56,7 @@ public class EjGUI3 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(81, 252, 171));
 
         texto.setEditable(false);
+        texto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         borrar.setText("C");
         borrar.setToolTipText("");
@@ -67,6 +68,11 @@ public class EjGUI3 extends javax.swing.JFrame {
 
         dividir.setText("/");
         dividir.setToolTipText("");
+        dividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dividirActionPerformed(evt);
+            }
+        });
 
         multiplicar.setText("*");
         multiplicar.setToolTipText("");
@@ -291,10 +297,16 @@ public class EjGUI3 extends javax.swing.JFrame {
 
     private void multiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicarActionPerformed
         // TODO add your handling code here:
+        n1=Float.parseFloat(this.texto.getText());
+        operando="*";
+        this.texto.setText("");
     }//GEN-LAST:event_multiplicarActionPerformed
 
     private void restarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restarActionPerformed
         // TODO add your handling code here:
+        n1=Float.parseFloat(this.texto.getText());
+        operando="-";
+        this.texto.setText("");
     }//GEN-LAST:event_restarActionPerformed
 
     private void nueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueveActionPerformed
@@ -304,6 +316,9 @@ public class EjGUI3 extends javax.swing.JFrame {
 
     private void sumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumarActionPerformed
         // TODO add your handling code here:
+        n1=Float.parseFloat(this.texto.getText());
+        operando="+";
+        this.texto.setText("");
     }//GEN-LAST:event_sumarActionPerformed
 
     private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
@@ -318,6 +333,41 @@ public class EjGUI3 extends javax.swing.JFrame {
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
         // TODO add your handling code here:
+        n2=Float.parseFloat(this.texto.getText());
+        switch (operando)
+        {
+            case "+":
+            {                
+                this.texto.setText(Float.toString(n1+n2));
+                break;
+            }
+            case "-":
+            {                
+                this.texto.setText(Float.toString(n1-n2));
+                break;
+            }
+            case "*":
+            {                
+                this.texto.setText(Float.toString(n1*n2));
+                break;
+            }
+            case "/":
+            {                
+                if(n2!=0)
+                {
+                    this.texto.setText(Float.toString(n1/n2));
+                }
+                else
+                {
+                    this.texto.setText("Error. División por cero");
+                }
+                break;
+            }
+            
+        }
+                
+                
+                    
     }//GEN-LAST:event_igualActionPerformed
 
     private void puntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_puntoActionPerformed
@@ -368,6 +418,13 @@ public class EjGUI3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.texto.setText(this.texto.getText()+ "8");
     }//GEN-LAST:event_ochoActionPerformed
+
+    private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
+        // TODO add your handling code here:
+        n1=Float.parseFloat(this.texto.getText());
+        operando="/";
+        this.texto.setText("");
+    }//GEN-LAST:event_dividirActionPerformed
 
     /**
      * @param args the command line arguments
