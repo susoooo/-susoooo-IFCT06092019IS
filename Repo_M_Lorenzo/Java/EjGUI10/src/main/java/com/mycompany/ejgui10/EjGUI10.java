@@ -7,7 +7,14 @@ package com.mycompany.ejgui10;
 
 import java.awt.Color;
 import java.awt.PopupMenu;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,9 +25,9 @@ public class EjGUI10 extends javax.swing.JFrame {
     /**
      * Creates new form EjGUI10
      */
-    pizza piz1;
+    pizza piz1=new pizza();
     public String nombre,direccion;
-    public Integer nIng,numero,descuento;
+    public Integer nIng,numero,descuento, precio;
     
     
     public EjGUI10() {
@@ -158,6 +165,11 @@ public class EjGUI10 extends javax.swing.JFrame {
         botonCancelar.setBackground(new java.awt.Color(215, 39, 27));
         botonCancelar.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         botonCancelar.setText("CANCELAR");
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarActionPerformed(evt);
+            }
+        });
 
         botonAñadir.setText("AÑADIR");
         botonAñadir.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +186,11 @@ public class EjGUI10 extends javax.swing.JFrame {
         });
 
         botonValidar.setText("VALIDAR");
+        botonValidar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonValidarActionPerformed(evt);
+            }
+        });
 
         añadirMasa.setText("AÑADIR");
         añadirMasa.addActionListener(new java.awt.event.ActionListener() {
@@ -458,13 +475,69 @@ public class EjGUI10 extends javax.swing.JFrame {
     private void comboDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDescuentoActionPerformed
         // TODO add your handling code here:
         descuento=(this.comboNumIng.getSelectedIndex());
+        this.textoPizza.append("Descuento: "+this.comboDescuento.getSelectedItem().toString()+"\n");
     }//GEN-LAST:event_comboDescuentoActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
         // TODO add your handling code here:
         File precios;
+        File clientes;
+        String cadena1, cadena2;
+        String partes[];
         precios = new File("/home/mlorenzo/Documentos/Repositorio/Java/EjGUI10/precios.txt");
+        clientes = new File("/home/mlorenzo/Documentos/Repositorio/Java/EjGUI10/clientes.txt");
+        
+        try {
+            FileReader fr = new FileReader (precios);
+            FileWriter fw= new FileWriter(clientes,true);
+            BufferedReader br = new BufferedReader(fr);
+            fw.write(this.textoPizza.getText());
+            
+            cadena1=br.readLine();
+                partes=cadena1.split((" "));
+                if(partes[0]==this.textoPizza.getText())//Cambiar por un for y dividir textopizza
+                {
+                    precio=precio+Integer.parseInt(partes[1]);
+                }
+            
+            
+            
+            fr.close();
+            fw.close();
+            precio=precio*(100-descuento);
+            System.out.println(precio);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(EjGUI10.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(EjGUI10.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_botonAceptarActionPerformed
+
+    private void botonValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonValidarActionPerformed
+        // TODO add your handling code here:
+        this.textoPizza.append("Cliente: "+this.textoNombre.getText()+"\n");
+        this.textoPizza.append("Direccion: "+this.textoDireccion.getText()+"\n");
+        this.textoPizza.append("Telefono: "+this.textoTelefono.getText()+"\n");
+    }//GEN-LAST:event_botonValidarActionPerformed
+
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        // TODO add your handling code here:
+        this.comboDescuento.setSelectedIndex(0);
+        this.comboMasa.setSelectedIndex(0);
+        this.comboIngredientes.setSelectedIndex(0);
+        this.comboNumIng.setSelectedIndex(0);
+        this.textoDireccion.setText("");
+        this.textoNombre.setText("");
+        this.textoPizza.setText("");
+        this.textoTelefono.setText("");
+        descuento=0;
+        nIng=0;
+        numero=0;
+        precio=0;
+        
+    }//GEN-LAST:event_botonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
