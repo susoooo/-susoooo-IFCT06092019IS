@@ -11,8 +11,10 @@ package alex.superpizza;
  */
 public class superpizza extends javax.swing.JFrame {
     
-    double pmasa[] = {0,10,12.5,13.75,15.20};
+    double pmasa[] = {0,5,5.50,6.75,7.70};
     double pm;
+    double ping[] = {2.50,2,3,3.20,10,4,1.50,1.50,1,1};
+    double pin;
  
    
     
@@ -235,12 +237,66 @@ public class superpizza extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void pedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedidoActionPerformed
+        String res;
         t.ticketcliente.setText(vc.textcliente.getText());/*para hacer cosas entre las ventanas,llamando a los objetos
         podemos hacerlas. Con este metodo estamos pidiendo a lo que esta escrito en el cuadro de texto llamado textcliente en la ventana
         del objeto vc, que se imprima en el cuadro de texto llamado ticketcliente en la ventana del objeto t*/
         pm=pmasa[masa.getSelectedIndex()];
 
         t.texticket.setText((String)masa.getSelectedItem()+"   "+Double.toString(pm)+" €"+"\n");
+        if (ing1.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Bacon "+Double.toString(ping[0])+" €"+ "\n");
+        }
+        if (ing2.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"York "+Double.toString(ping[1])+" €"+ "\n"); 
+        }
+        if (ing3.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Pollo "+Double.toString(ping[2])+" €"+ "\n");
+        }
+        if (ing4.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Ternera "+Double.toString(ping[3])+" €"+ "\n");
+        }
+        if (ing5.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Piña "+Double.toString(ping[4])+" €"+ "\n");
+        }
+        if (ing6.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Gambas "+Double.toString(ping[5])+" €"+ "\n");
+        }
+        if (ing7.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Champiñones "+Double.toString(ping[6])+" €"+ "\n");
+        }
+        if (ing8.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Atun "+Double.toString(ping[7])+" €"+ "\n");
+        }
+        if (ing9.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Barbacoa "+Double.toString(ping[8])+" €"+ "\n");
+        }
+        if (ing10.isSelected())
+        {
+            res=t.texticket.getText();
+            t.texticket.setText(res+"Carbonara "+Double.toString(ping[9])+" €"+ "\n");
+        }
+           
+            
+        
         t.setVisible(true);
         
         // TODO add your handling code here:
