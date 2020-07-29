@@ -1,4 +1,4 @@
-package com.example.EjSpinrg3;
+package com.example.EjSpring4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,22 +8,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class EjSpinrg3Application {
+public class EjSpring4Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EjSpinrg3Application.class, args);
-                
+		SpringApplication.run(EjSpring4Application.class, args);
 	}
-    private int peticion=0;
         
-        @GetMapping("/peticion")
+        private long tiempo=0;
+        private float horas=0;
+        
+        
+        @GetMapping("/tiempo")
     public String reseteo(@RequestParam(value = "reset", defaultValue = "") String name) {
-        if (name.contains("true"))
-        {
-            peticion=0;
-        }
-        peticion=peticion+1;
-        return String.format("He recibido %d peticiones", peticion);
+        tiempo=System.currentTimeMillis();
+        horas=tiempo/(3600*1000);
+        return String.format("Han transcurrido %f horas",horas);
     }
 
 }
