@@ -16,21 +16,21 @@ public class SpringE1Application {
           public String dia1() 
           {
   
-          return "El lunes da asco";
+          return "<HTML><iframe src=\"https://localhost:8080/martes\"width=\"100%\" height=\"100%\"title=\"Que bien programao!!!\"></iframe>";
                  
           }
           @GetMapping("/martes")
           public String dia2() 
           {
   
-          return "Los martes hay champions";
+          return "Los martes hay champions"+"\n"+"http://localhost:8080/miercoles";
                  
           }
           @GetMapping("/miercoles")
           public String dia3() 
           {
   
-          return "El miercoles es dia de vino";
+          return "El miercoles es dia de vino"+"\n"+"<HTTP><http://localhost:8080/lunes>";
                  
           }
 
