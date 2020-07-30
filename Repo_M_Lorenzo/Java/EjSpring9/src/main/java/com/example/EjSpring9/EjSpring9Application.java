@@ -20,27 +20,42 @@ public class EjSpring9Application {
 		SpringApplication.run(EjSpring9Application.class, args);
 	}
         
-        @GetMapping("/numeros")
-        public String numeros(@RequestParam(value = "n1") int num1) {
+        @GetMapping("/fecha")
+        public String fecha(@RequestParam(value = "n1") int num1) {
         fecha=new Date();
         fechaForm=new SimpleDateFormat();
         String formato,actual;
         switch(num1)
         {
             case 1:
-                formato="dd/MM/aaaa";
+                formato="dd/MM/yyyy";
                 fechaForm=new SimpleDateFormat(formato);
                 break;
             
             case 2:
-                formato="MM/dd/aaaa";
+                formato="MM/dd/yyyy";
                 fechaForm=new SimpleDateFormat(formato);
                 break;
             
             case 3:
-                formato="dd-MM-aaaa";
+                formato="dd-MM-yyyy";
                 fechaForm=new SimpleDateFormat(formato);
                 break;
+                
+            case 4:
+                formato="dd";
+                fechaForm=new SimpleDateFormat(formato);
+                break;
+            case 5:
+                formato="MM";
+                fechaForm=new SimpleDateFormat(formato);
+                break;
+            case 6:
+                formato="yyyy";
+                fechaForm=new SimpleDateFormat(formato);
+                break;
+            default:
+                return ("Opcion incorrecta. Solo admitidas opciones del 1 al 6");
                 
                 
         }
