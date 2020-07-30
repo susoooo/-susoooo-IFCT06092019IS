@@ -1,0 +1,39 @@
+
+package com.mycompany.puntoespazo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class posicion {
+    
+    int x;
+    int y;
+    
+    public void posicion( int paramx, int paramy) {
+   x = paramx;
+   y= paramy;
+        }
+    
+}
+  
+  public class puntoespazo {
+      
+        public static void main(String args[]) 
+    {
+        
+        try 
+            {
+                
+                
+            }
+        
+        catch (Exception e) 
+            {
+            System.out.println("Sucedeu un erro na lectura");
+            }
+    }
+        
+        
+        
+    
+  }     
