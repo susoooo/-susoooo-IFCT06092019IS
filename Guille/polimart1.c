@@ -68,7 +68,7 @@ protected:
 string coche;
 string clientes;
 int cliente
-int móvil;
+int movil;
 int PorcenCom;
 char AreaVenta [25];
  
@@ -100,8 +100,8 @@ char Secretario;
   
 main ()
 {
-    Empleado Eimp1("Juan","Alvarez Alvarez", 77666888, 649870909, Calle Alegría 47-3º 27777 Ribadeo Lugo, 4, 23234.57);
-    Secretario Simp1("Eduardo","Gonzalez Gonzalez", 78978978, 645897889, Calle Laotra 88-1º 27777 Mondoñedo Lugo,3,26433.89);
+    Empleado Eimp1("Juan","Alvarez Alvarez", 77666888, 649870909, Calle Alegria 47-3º 27777 Ribadeo Lugo, 4, 23234.57);
+    Secretario Simp1("Eduardo","Gonzalez Gonzalez", 78978978, 645897889, Calle Laotra 88-1º 27777 Mondonedo Lugo,3,26433.89);
     Vendedor Vimp1("Santigo", "Ares Ares",87654321, 676878765, Calle Olmo 25 32333 Riotorto Lugo),6,29654.76);
     JefeZona JZimp1("Rodrigo","Iria Iria", 76876876, 690324590, Calle Sol 32 43234 Antas Lugo,8,36897.76);
 
