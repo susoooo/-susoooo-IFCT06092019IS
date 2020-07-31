@@ -8,10 +8,10 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>Json2</groupId>
-	<artifactId>json2</artifactId>
+	<groupId>Json3</groupId>
+	<artifactId>json3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>json2</name>
+	<name>json3</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

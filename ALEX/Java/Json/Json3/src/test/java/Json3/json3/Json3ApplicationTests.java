@@ -1,10 +1,10 @@
-package Json2.json2;
+package Json3.json3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Json2ApplicationTests {
+class Json3ApplicationTests {
 
 	@Test
 	void contextLoads() {
