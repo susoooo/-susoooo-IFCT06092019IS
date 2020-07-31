@@ -5,25 +5,28 @@
  */
 package com.example.EjSpringRest3;
 
-import java.util.Date;
-
 /**
  *
  * @author mlorenzo
  */
 
 public class proceso{
+
+    private final Integer longitud;
+    private final Integer numPalabras;
     
-    private Integer longitud,numPalabras,numLetras,numNumeros;
-    private String texto;
+    private final Integer numLetras;
+    private final Integer numNumeros;
+    private final String texto;
     
     public proceso(String texto)
     {
         this.texto=texto;
         this.longitud=texto.length();
         this.numPalabras=texto.split(" ").length;
-        this.numLetras=contarLetras();
         this.numNumeros=contarNumeros();
+        this.numLetras=contarLetras();
+        
         
     }
     
@@ -34,15 +37,11 @@ public class proceso{
     
     private Integer contarLetras()
     {
-        Integer nLetras,nEspacios;
+        Integer nLetras;
         nLetras=0;
-        nEspacios=0;
-        while(this.texto.contains(" ")==true)
-        {
-            nEspacios=nEspacios+1;
-                    
-        }
-        nLetras=this.longitud-nEspacios;
+        nLetras=(this.texto.length())-(this.numNumeros)-(texto.split(" ").length)+1;
+        
+       
         
         return nLetras;
         
@@ -51,13 +50,20 @@ public class proceso{
     {
         Integer nNum;
         nNum=0;
-        if(this.texto.contains("1")==true||this.texto.contains("2")==true||this.texto.contains("3")==true||this.texto.contains("4")==true
-                ||this.texto.contains("5")==true||this.texto.contains("6")==true||this.texto.contains("7")==true||
-                this.texto.contains("8")==true||this.texto.contains("9")==true||this.texto.contains("0")==true)
+        int i;
+        char[]cadena=new char[this.longitud];
+        cadena=this.texto.toCharArray();
+        
+        for(i=0;i<cadena.length;i++)
         {
-            nNum=nNum+1;
+            if(cadena[i]=='1'||cadena[i]=='2'||cadena[i]=='3'||cadena[i]=='4'||cadena[i]=='5'||
+                    cadena[i]=='6'||cadena[i]=='7'||cadena[i]=='8'||cadena[i]=='9'||cadena[i]=='0')
+            {
+                nNum=nNum+1;
                     
+            }
         }
+        
         return nNum;
         
     }

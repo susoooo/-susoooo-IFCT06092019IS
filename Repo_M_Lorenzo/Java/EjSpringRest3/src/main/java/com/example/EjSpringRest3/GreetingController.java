@@ -21,9 +21,11 @@ public class GreetingController {
 
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
+	
+	
 
 	@GetMapping("/greeting")
-	public proceso greeting(@RequestParam(value = "texto", defaultValue = "Hola, esta es una prueba de texto") String texto){
+	public proceso greeting(@RequestParam(value = "texto", defaultValue = "Hola, esta es una prueba de texto 1 2 3") String texto){
 		return new proceso(texto);
 	}
 }
