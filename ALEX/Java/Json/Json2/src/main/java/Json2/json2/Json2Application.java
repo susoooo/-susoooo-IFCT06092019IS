@@ -56,8 +56,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Json2Application {
     
         @GetMapping("/text")
-	public contador text(@RequestParam(value = "texto", defaultValue = "1 A ver si este ch7isme 4 cuenta 123 paklabras y 2 veces") String texto){
-		return new contador(texto);
+	public contador text(@RequestParam(value = "texto", defaultValue = "1 A ver si este ch7isme 4 cuenta 123 paklabras y 2 veces") String texto)
+                /*tenemos que crear un objeto de la clase contenedora (class contador)*/
+        {
+		return new contador(texto);/*tiene que devolver un objeto de la clase contenedora (class contador)*/
 	}
 
 	public static void main(String[] args) {

@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-class number{
+class numberos{
     ArrayList numeros;
     
-    public number(ArrayList numeros){
+    public numberos(ArrayList numeros){
         this.numeros=numeros;
     }
     public ArrayList getNumeros(){return numeros;}
@@ -23,12 +23,24 @@ class number{
 @SpringBootApplication
 @RestController
 public class Json3Application {
+     
    ArrayList numeros=new ArrayList();
     @GetMapping("/add")
-	public number text(@RequestParam(value = "num", defaultValue = "") int n){
+	public void text(@RequestParam(value = "num", defaultValue = "") String n){
             
-            return new number(numeros.add(n));
+           numeros.add(n);    
 	}
+    @GetMapping("/remove")
+	public void remove(@RequestParam(value = "num", defaultValue = "") String n){
+            numeros.remove(n);                  
+	}    
+    @GetMapping("/query")
+	public numberos lista(){
+            
+            return new numberos (numeros);
+	}   
+        
+        
 
 	public static void main(String[] args) {
 		SpringApplication.run(Json3Application.class, args);
