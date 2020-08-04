@@ -49,9 +49,10 @@ public class listaController {
     @GetMapping("/add")
 	public void añadir(@RequestParam(value = "producto", defaultValue = "producto") String producto,@RequestParam(value = "precio", defaultValue = "5") String precio){
 
-            arraynumeros[(int)counter.getAndIncrement()]=counter.intValue();
-            arrayproductos[(int)counter.getAndIncrement()]=producto;
-            arrayprecios[(int)counter.getAndIncrement()]=precio;
+            arraynumeros[counter.intValue()]=counter.intValue();
+            arrayproductos[counter.intValue()]=producto;
+            arrayprecios[counter.intValue()]=precio;
+            counter.incrementAndGet();
             
             
 	}
@@ -76,6 +77,14 @@ public class listaController {
                     
                 } 
             arrayproductos[i]=nuevo;
+            
+	}
+        
+    @GetMapping("/estadistica")
+	public estadisticas estadistica(){
+           
+
+            return new estadisticas(arraynumeros,arrayproductos,arrayprecios);
             
 	}
 
